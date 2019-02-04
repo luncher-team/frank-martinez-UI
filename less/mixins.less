@@ -1,6 +1,6 @@
 // Mixins
 // Color pointers
-@nav-bg: @sea-shell;
+@nav-bg: @white;
 //@nav-bg-gradient: linear-gradient(@apple-red, @olive-green);
 @nav-font: @apple-red;
 @nav-border: @river-bend;
@@ -25,11 +25,13 @@
 @apple-pink: #e54a48;
 @apple-red: #bd3833;
 
+@white: #ffffff;
 @porcelain: #F6F7F8;
 @wild-sand: #F6F6F6;
 @sea-shell: #F1F1F1;
 @waterloo: #81848E;
 @river-bend: #454A59;
+@dark: #232323;
 
 
 // Breakpoints
@@ -49,9 +51,12 @@
 .border-radius(@tl: 0; @tr: @tl; @bl: 0; @br: @bl) {
     border-radius: @tl @tr @bl @br;
 }
+.border-style(@border-style-width: 5px; @border-style-color: @apple-red) {
+    border-left: @border-style-width solid @border-style-color;
+}
 
 // Buttons
-.btn(@btn-bg-color; @btn-color; @btn-width: 50%; @btn-border-radius: 0; @btn-font-size: 1.8rem) {
+.btn(@btn-bg-color; @btn-color; @btn-width: 50%; @btn-border-radius: 0; @btn-font-size: 1.8rem; @btn-padding: 8px 10px) {
     background-color: @btn-bg-color;
     color: @btn-color;
     border-radius: @btn-border-radius;
@@ -60,8 +65,9 @@
     text-align: center;
     width: @btn-width;
     min-width: 100px;
-    padding: 8px 0;
+    padding: @btn-padding;
     border: 0;
+    text-decoration: none;
     cursor: pointer;
     &:hover{
         color: @btn-bg-color;
@@ -112,4 +118,16 @@
     font-family: 'Arvo', serif;
     font-weight: @weight;
 }
+
+
+// shadows
+.font-shadow(@font-shadow-x: 1px;@font-shadow-y: 1px;@font-shadow-blur: 5px;@font-shadow-color: black) {
+    text-shadow: @font-shadow-x @font-shadow-y @font-shadow-blur @font-shadow-color;
+}
+.box-shadow(@box-shadow-x: 1px;@box-shadow-y: 1px;@box-shadow-blur: 5px;@box-shadow-color: black) {
+    box-shadow: @box-shadow-x @box-shadow-y @box-shadow-blur @box-shadow-color;
+}
+
+// Grid
+
 

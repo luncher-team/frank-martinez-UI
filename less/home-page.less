@@ -1,8 +1,131 @@
 // Home Content
+.splash {
+  height: 90%;
+  .splash-image {
+    background-image: url("../assets/img/6057054938_d952659baa_o.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+    position: relative;
+    filter: brightness(75%) contrast(50%);
+  }
+  .tagline {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 100%;
+    text-align: center;
+    color: @apple-red;
+    
+    h2 {
+      background-color: @porcelain;
+      padding: 18px;
+      width: 33%;
+      margin: 0 auto;
+      .border-style;
+      .box-shadow(2px, 2px, 8px, rgba(0,0,0,0.75));
+    }
+  }
+}
+
+section {
+  display: grid;
+  width: 100%;
+  margin-top: -3px;
+  .leading-arrow {
+    background-color: @dark;
+    color: @white;
+    font-size: 5rem;
+    margin: -27px auto;
+    border-radius: 28px;
+    border: 2px solid @dark;
+    z-index: 3;
+  }
+}
+
+
 .home {
+  display: block;
+  max-width: unset;
+  width: 100%;
+  
+    
+    .luncher-info {
+      background-color: @dark;
+      color: @porcelain;
+      position: relative;
+      padding: 20%;
+
+      p {
+        text-align: center; 
+      }
+      .icon { 
+        
+        align-self: center;
+        font-size: 4rem;
+      }
+      .text {
+        font-size: 2.2rem;
+      }
+    }
+    .school-map {
+      background-color: @porcelain;
+      color: @dark;
+      position: relative;
+      padding: 20%;
+      
+
+      p {
+        text-align: center; 
+      }
+      .icon { 
+        background-color: @sea-shell;
+        grid-column-start: 1;
+        grid-column-end: 1;
+        grid-row-start: 1;
+        grid-row-end: span 2;
+        align-self: center;
+        font-size: 4rem;
+      }
+      .description {
+        grid-column-start: 2;
+        grid-column-end: 2;
+        grid-row-start: 1;
+        grid-row-end: 1;
+
+        background-color: @sea-shell;
+        font-size: 2.2rem;
+
+      }
+      .map {
+        grid-column-start: 2;
+        grid-column-end: 2;
+        grid-row-start: 2;
+        grid-row-end: 2;
+
+        background-color: @sea-shell;
+        font-size: 2.2rem;
+
+      }
+    }
+  
+
+  
+
+
+
+
+
+
 
   .btn {
-    .btn(@button-bg-color; @porcelain; 100%; 0px; 1.8rem);
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    .btn(@sea-shell; @apple-red; 50%; 0px; 1.8rem);
+    .border-style;
+    z-index: 1;
   }
 
 }   // home
