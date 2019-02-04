@@ -1,0 +1,298 @@
+.font-body {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+}
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+* {
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+}
+html,
+body {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  color: #454A59;
+}
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: 'Arvo', serif;
+  font-weight: 400;
+  color: #bd3833;
+}
+h1 {
+  font-size: 3.6rem;
+}
+h2 {
+  font-size: 3.2rem;
+}
+h3 {
+  font-size: 2.8rem;
+}
+p {
+  font-size: 1.6rem;
+  line-height: 1.4;
+}
+li {
+  font-size: 1.4rem;
+}
+.container {
+  max-width: 800px;
+  width: 100%;
+  margin: 0 auto;
+}
+nav {
+  background: #F1F1F1;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  border-bottom: 1px solid #454A59;
+  box-shadow: 0px 3px 10px 1px #454A59;
+  position: sticky;
+  top: 0;
+}
+nav h1 {
+  align-self: center;
+  padding: 10px;
+}
+@media (max-width: 375px) {
+  nav h1 {
+    font-size: 10vw;
+  }
+}
+nav ul {
+  display: flex;
+  justify-content: center;
+}
+@media (max-width: 375px) {
+  nav ul {
+    flex-direction: column;
+    text-align: center;
+    margin-top: -20px;
+    margin-bottom: 17px;
+  }
+}
+nav ul li {
+  padding: 5px 0 10px;
+  margin: 0 0 1px 0;
+}
+@media (max-width: 500px) {
+  nav ul li {
+    font-size: 1.2rem;
+    margin: 0;
+  }
+}
+@media (max-width: 375px) {
+  nav ul li {
+    padding: 10px;
+    margin: 5px;
+  }
+}
+nav ul li a {
+  padding: 10px 20px;
+  color: #bd3833;
+  background-color: unset;
+  font-weight: 600;
+  text-decoration: none;
+}
+nav ul li a:hover {
+  color: #F1F1F1;
+  background-color: #bd3833;
+  font-weight: 600;
+  border-radius: 10px 10px 0 0;
+  -webkit-transition-duration: 0.75s;
+  -moz-transition-duration: 0.75s;
+  transition-duration: 0.75s;
+}
+@media (max-width: 500px) {
+  nav ul li a:hover {
+    border-radius: 5px 5px 0 0;
+  }
+}
+@media (max-width: 375px) {
+  nav ul li a:hover {
+    border-radius: 0 0 0 0;
+    letter-spacing: 0.75rem;
+  }
+}
+@media (max-width: 500px) {
+  nav ul li a {
+    padding: 10px 10px;
+  }
+}
+@media (max-width: 375px) {
+  nav ul li a {
+    width: 100%;
+    position: fixed;
+    left: 0;
+    text-transform: uppercase;
+    letter-spacing: 0.25rem;
+  }
+}
+footer {
+  color: #81848E;
+  background: #F6F6F6;
+  padding: 20px 0;
+  border: 1px double #81848E;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.home .btn {
+  background-color: #454A59;
+  color: #F6F7F8;
+  border-radius: 0px;
+  font-size: 1.8rem;
+  font-weight: bolder;
+  text-align: center;
+  width: 100%;
+  min-width: 100px;
+  padding: 8px 0;
+  border: 0;
+  cursor: pointer;
+}
+.home .btn:hover {
+  color: #454A59;
+  background-color: #F6F7F8;
+  -webkit-transition-duration: 0.75s;
+  -moz-transition-duration: 0.75s;
+  transition-duration: 0.75s;
+}
+@media (max-width: 500px) {
+  .home .btn {
+    width: 100%;
+    padding: 20px;
+  }
+}
