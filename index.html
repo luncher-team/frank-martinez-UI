@@ -28,7 +28,9 @@
   </nav>
 
   <section class="splash">
-      <div class="splash-image"></div>
+      <div class="splash-image">
+        <div class="splash-gradient"></div>
+      </div>
       <div class="tagline">
         <h2>Help feed children, today!</h2>
         <br>
@@ -38,19 +40,13 @@
   </section>
   
   <section>
-    <i class="leading-arrow fas fa-arrow-alt-circle-down"></i>
+    <a href="#luncher-info" class="divider"><i class="leading-arrow fas fa-arrow-alt-circle-down"></i></a>
   </section>
   
   <section class="container home">
-    <div class="luncher-info">
-      <div class="grid">
+    <section class="luncher-info" id="luncher-info">
+      <div class="grid-col-2">
         <p class="box icon"><i class="fas fa-info"></i></p>
-        <p class="box text">There are kids who need healthy meals at school
-          <br>
-          Find a school in need, today, and help feed hungry kids
-        </p>
-
-        <p class="box icon"><i class="fas fa-heart"></i></p>
         <p class="box text">There are kids who need healthy meals at school
           <br>
           Find a school in need, today, and help feed hungry kids
@@ -62,19 +58,73 @@
           Register today
         </p>
 
+        <p class="box icon"><i class="fas fa-heart"></i></p>
+        <p class="box text">100% of your money goes to school lunches
+          <br>
+          and helps kids that need it the most
+        </p>
+
+        <p class="box icon"><i class="fas fa-hand-holding-usd"></i></p>
+        <p class="box text">Register an account 
+          <br>
+          and your donations could be tax-refunable
+        </p>
+
+        <div class="btn">Sign-in or Register</div>
+
+        
       </div>
-    </div>
-    <div class="school-map">
-      <p class="box description">
-        <i class="icon fas fa-map-marked-alt"></i>
-        <br>
-        Find out what schools near you need donations now
-      </p>
-      <p class="box map" id="mapid">~this is a map~
-      </p>
-    </div>
+    </section>
+
+    <section class="school-map">
+      <div class="grid-col-1">
+        <p class="box description">
+          <i class="icon fas fa-map-marked-alt"></i>
+          <br>
+          Find schools near you that need donations now
+        </p>
+        <p class="box map" id="mapid">~this is a map~
+        </p>
+      </div>
+    </section>
 
 
+
+    <section class="contact">
+      <div class="grid-col-4">
+        <h3>Contact Us</h3>
+
+        <p class="box icon">
+          <i class="fas fa-envelope"></i>
+        </p>
+        <p class="box text" id="mapid">
+          get@luncher.app
+        </p>
+        <a href=""><i class="social fab fa-twitter"></i></a>
+        
+        <p class="box icon">
+          <i class="fas fa-phone"></i>
+        </p>
+        <p class="box text" id="mapid">
+          1-800-YUM-GIFT
+        </p>
+        <a href=""><i class="social fab fa-patreon"></i></a>
+
+        <p class="box icon">
+          <i class="fas fa-map-marker-alt"></i>
+        </p>
+        <p class="box text" id="mapid">
+          111 Yosemite Way<br>
+          Mendocino, CA
+        </p>
+        <a href=""><i class="social fas fa-share-square"></i></a> 
+        
+        
+        
+
+      </div>
+    </section>
+  
     
 
 
@@ -95,14 +145,14 @@
 </body>
 <script src="js/leaflet-src.js"></script>
 <script>
-  var mymap = L.map('mapid').setView([39.505, -100.09], 4);
+  var mymap = L.map('mapid').setView([22.505, -120.09], 6);
   L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}', {
-    attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+    attribution: '',
     maxZoom: 35,
     id: 'mapbox.streets',
     accessToken: 'pk.eyJ1IjoidGV0cmFoZWRyb24iLCJhIjoiY2pycXNrcnRxMXM2bTQ0cG40OTR3cjNqNiJ9.MbZehg90Sww8NcivGWi5UQ'
   }).addTo(mymap);
-  L.marker([39.505, -100.09]).addTo(mymap).bindPopup("<b>Jefferson Elementary School</b><br>Needs $1,200").openPopup();
+  L.marker([37.505, -122.09]).addTo(mymap).bindPopup("<b>Ruskin Elementary School</b><br>Needs $950").openPopup();
   // L.marker([30.505, -150.09]).addTo(mymap).bindPopup("<b>Jefferson High School</b><br>Needs $2,100").openPopup();
   
 </script>

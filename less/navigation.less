@@ -1,12 +1,13 @@
 // Navigation code here
 nav {
-  background: @nav-bg;
+  // background: @nav-bg;
   width: 100%;
   display: flex;
-  border-bottom: 1px solid @nav-border;
-  box-shadow: 0px 3px 10px 1px @nav-border;
+  // border-bottom: 1px solid @nav-border;
+  // box-shadow: 0px 3px 10px 1px @nav-border;
   z-index: 5;
-  .sticky-top(0);
+  position: fixed;
+  // .sticky-top(0);
   h1 {
     align-self: flex-start;
     padding: 10px;
@@ -16,7 +17,8 @@ nav {
     }
     a {
       text-decoration: none;
-      color: @apple-red;
+      color: @white;
+      .font-shadow;
     }
   }
   ul {
@@ -34,6 +36,7 @@ nav {
       padding: 5px 0;
       margin: 0 0 0 0;
       .border-style;
+      .font-shadow;
       @media @phone {
         font-size: 1.2rem;
         margin: 0;
@@ -43,7 +46,7 @@ nav {
         margin: 5px;
       }
       .btn {
-        .btn(@nav-bg; @nav-font; 100%; 0px; 1.8rem; 2.4px 15px 2.4px 10px);
+        .btn(@clear-color; @white; @apple-red; 100%; 0px; 1.8rem; 2.4px 15px 2.4px 10px);
         margin: 0 5px 0 0;
       }
       a {

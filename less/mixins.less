@@ -9,22 +9,25 @@
 @main-font-color: @river-bend;
 @main-border-color: @border-real;
 
-@footer-background: @wild-sand;
-@footer-font-color: @waterloo;
+@footer-background: @apple-red;
+@footer-font-color: @apple-tan;
 @footer-border: @border-real;
 
 @button-bg-color: @river-bend;
 @border-real: @waterloo;
+
+@splash-bg-gradient: linear-gradient( rgba(@black, 1), rgba(@black, 0), rgba(@black, 0), rgba(@black, 0));
 
 
 // Color Vars
 @apple-yellow: #ffec86;
 @apple-gold: #ffd25d;
 @apple-tan: #9d6a4f;
-@olive-green: #ae9d27;
+@apple-green: #ae9d27;
 @apple-pink: #e54a48;
 @apple-red: #bd3833;
 
+@clear-color: rgba(255,255,255,0);
 @white: #ffffff;
 @porcelain: #F6F7F8;
 @wild-sand: #F6F6F6;
@@ -32,7 +35,7 @@
 @waterloo: #81848E;
 @river-bend: #454A59;
 @dark: #232323;
-
+@black: #000000;
 
 // Breakpoints
 @phone: ~"(max-width: 500px)";
@@ -56,7 +59,7 @@
 }
 
 // Buttons
-.btn(@btn-bg-color; @btn-color; @btn-width: 50%; @btn-border-radius: 0; @btn-font-size: 1.8rem; @btn-padding: 8px 10px) {
+.btn(@btn-bg-color; @btn-color; @btn-color-hover: @btn-bg-color; @btn-width: 50%; @btn-border-radius: 0; @btn-font-size: 1.8rem; @btn-padding: 8px 10px) {
     background-color: @btn-bg-color;
     color: @btn-color;
     border-radius: @btn-border-radius;
@@ -70,7 +73,7 @@
     text-decoration: none;
     cursor: pointer;
     &:hover{
-        color: @btn-bg-color;
+        color: @btn-color-hover;
         background-color: @btn-color;
         .transition(0.75s);
     }
@@ -86,7 +89,7 @@
     background-color: unset;
     font-weight: @link-bold;
     text-decoration: none;
-    &:hover{
+    &:hover {
         color: @link-bg-color;
         background-color: @link-fg-color;
         font-weight: @link-bold;
