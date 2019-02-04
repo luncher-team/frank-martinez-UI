@@ -27,6 +27,14 @@
       .box-shadow(2px, 2px, 8px, rgba(0,0,0,0.75));
     }
   }
+  .btn {
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    .btn(@sea-shell; @apple-red; 25%; 0px; 1.8rem);
+    .border-style;
+    z-index: 1;
+  }
 }
 
 section {
@@ -63,33 +71,32 @@ section {
       .icon { 
         
         align-self: center;
-        font-size: 4rem;
+        font-size: 6rem;
       }
       .text {
         font-size: 2.2rem;
       }
+      
     }
     .school-map {
       background-color: @porcelain;
       color: @dark;
       position: relative;
       padding: 20%;
-      
+      display: grid;
+      grid-template-columns: 100%;
+      grid-gap: 10px;
 
       p {
         text-align: center; 
-      }
-      .icon { 
-        grid-column-start: 1;
-        grid-column-end: 1;
-        grid-row-start: 1;
-        grid-row-end: span 2;
-        align-self: center;
-        font-size: 4rem;
+        .icon {
+          font-size: 6rem;
+          padding: 0 0 20px 0;
+        }
       }
       .description {
-        grid-column-start: 2;
-        grid-column-end: 2;
+        grid-column-start: 1;
+        grid-column-end: 1;
         grid-row-start: 1;
         grid-row-end: 1;
 
@@ -97,8 +104,8 @@ section {
 
       }
       .map {
-        grid-column-start: 2;
-        grid-column-end: 2;
+        grid-column-start: 1;
+        grid-column-end: 1;
         grid-row-start: 2;
         grid-row-end: 2;
 
@@ -112,21 +119,6 @@ section {
     }
   
 
-  
 
-
-
-
-
-
-
-  .btn {
-    display: flex;
-    justify-content: center;
-    margin: 0 auto;
-    .btn(@sea-shell; @apple-red; 50%; 0px; 1.8rem);
-    .border-style;
-    z-index: 1;
-  }
 
 }   // home
