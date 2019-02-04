@@ -359,7 +359,6 @@ section .leading-arrow {
   text-align: center;
 }
 .home .school-map .icon {
-  background-color: #F1F1F1;
   grid-column-start: 1;
   grid-column-end: 1;
   grid-row-start: 1;
@@ -372,7 +371,6 @@ section .leading-arrow {
   grid-column-end: 2;
   grid-row-start: 1;
   grid-row-end: 1;
-  background-color: #F1F1F1;
   font-size: 2.2rem;
 }
 .home .school-map .map {
@@ -380,8 +378,11 @@ section .leading-arrow {
   grid-column-end: 2;
   grid-row-start: 2;
   grid-row-end: 2;
-  background-color: #F1F1F1;
   font-size: 2.2rem;
+}
+.home .school-map #mapid {
+  height: 333px;
+  font-size: 1rem;
 }
 .home .btn {
   display: flex;

@@ -7,6 +7,11 @@
   <link href="https://fonts.googleapis.com/css?family=Arvo:400,700|Roboto" rel="stylesheet">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
   <link href="css/index.css" rel="stylesheet">
+  <link href="css/leaflet.css" rel="stylesheet">
+  
+  <!-- <script src="https://unpkg.com/leaflet@1.4.0/dist/leaflet.js"
+  integrity="sha512-QVftwZFqvtRNi0ZyCtsznlKSWOStnDORoefr1enyq5mVL4tmKB3S/EnC3rRJcxCPavG10IcrVGSmPh6Qw5lwrg=="
+  crossorigin=""></script> -->
   <!--[if lt IE 9]>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
   <![endif]-->
@@ -48,7 +53,7 @@
         <br>
         Find a school in need, today, and help feed hungry kids
       </p>
-      <p class="box map">This is a map
+      <p class="box map" id="mapid">This is a map
       </p>
     </div>
 
@@ -71,4 +76,17 @@
     <p>Copyright Luncher 2019</p>
   </footer>
 </body>
+<script src="js/leaflet-src.js"></script>
+<script>
+  var mymap = L.map('mapid').setView([39.505, -100.09], 4);
+  L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}', {
+    attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+    maxZoom: 35,
+    id: 'mapbox.streets',
+    accessToken: 'pk.eyJ1IjoidGV0cmFoZWRyb24iLCJhIjoiY2pycXNrcnRxMXM2bTQ0cG40OTR3cjNqNiJ9.MbZehg90Sww8NcivGWi5UQ'
+  }).addTo(mymap);
+  L.marker([39.505, -100.09]).addTo(mymap).bindPopup("<b>Jefferson Elementary School</b><br>Needs $1,200").openPopup();
+  // L.marker([30.505, -150.09]).addTo(mymap).bindPopup("<b>Jefferson High School</b><br>Needs $2,100").openPopup();
+  
+</script>
 </html>
