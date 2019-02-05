@@ -485,7 +485,7 @@ section a.divider .leading-arrow:hover {
   align-items: center;
 }
 .home .contact .grid-col-4 h3 {
-  grid-column: span 3;
+  grid-column: span 4;
   text-align: center;
   color: #ffffff;
 }
@@ -494,17 +494,68 @@ section a.divider .leading-arrow:hover {
   font-size: 4rem;
   text-align: center;
 }
+.home .contact .grid-col-4 .text,
+.home .contact .grid-col-4 .social-text {
+  font-size: 2.2rem;
+}
 .home .contact .grid-col-4 .icon {
   grid-column: 1;
 }
 .home .contact .grid-col-4 .text {
   grid-column: 2;
-  font-size: 2.2rem;
 }
 .home .contact .grid-col-4 .social {
   grid-column: 3;
+}
+.home .contact .grid-col-4 .social-text {
+  grid-column: 4;
 }
 .home .contact .grid-col-4 a {
   color: #ffffff;
   text-align: center;
 }
+.home .newsletter {
+  background-image: url("../assets/img/Fruit-bar-pic-Web-USDAgov.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  filter: grayscale(50%);
+  color: #ffffff;
+}
+.home .newsletter .container-form {
+  padding: 20px;
+}
+.home .newsletter .container-form h3 {
+  color: #ffffff;
+  text-align: center;
+  text-shadow: 1px 1px 5px black;
+}
+.home .newsletter .container-form p {
+  text-align: center;
+}
+.home .newsletter .container-form input[type=text],
+.home .newsletter .container-form input[type=submit] {
+  width: 100%;
+  padding: 12px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+.home .newsletter .container-form input[type=text] input[type=checkbox],
+.home .newsletter .container-form input[type=submit] input[type=checkbox] {
+  margin-top: 16px;
+}
+.home .newsletter .container-form input[type=submit] {
+  background-color: #bd3833;
+  color: #ffffff;
+  border: none;
+}
+.home .newsletter .container-form input[type=submit]:hover {
+  opacity: 0.8;
+  transition-duration: 0.5s;
+}
+/* Add some padding and a grey background color to containers */
+/* Style the input elements and the submit button */
+/* Add margins to the checkbox */
+/* Style the submit button */

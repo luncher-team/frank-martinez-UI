@@ -132,7 +132,7 @@ section a.divider {
     .grid-col-4 {
       align-items: center;
       h3 {
-        grid-column: span 3;
+        grid-column: span 4;
         text-align: center;
         color: @white;
       }
@@ -140,29 +140,71 @@ section a.divider {
       .icon, .social {
         font-size: 4rem;
         text-align: center;
-        
       }
-      .icon {
-        grid-column: 1;
-      }
-      .text {
-        grid-column: 2;
+      .text, .social-text {
         font-size: 2.2rem;
       }
-      .social {
-        grid-column: 3;
-      }
+      .icon { grid-column: 1; }
+      .text { grid-column: 2; }
+      .social { grid-column: 3; }
+      .social-text { grid-column: 4; }
       a {
         color: @white;
         text-align: center;
       }
-      
-      
+    }
+  }
+  .newsletter {
+    background-image: url("../assets/img/Fruit-bar-pic-Web-USDAgov.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    filter: grayscale(50%);
+    color: @white;
+    .container-form {
+      padding: 20px;
+      h3 {
+        color: @white;
+        text-align: center;
+        .font-shadow;
+      }
+      p { text-align: center; }
+      input[type=text], input[type=submit] {
+        width: 100%;
+        padding: 12px;
+        margin: 8px 0;
+        display: inline-block;
+        border: 1px solid #ccc;
+        box-sizing: border-box;
+        input[type=checkbox] {
+          margin-top: 16px;
+        }
+      }
+      input[type=submit] {
+        background-color: @apple-red;
+        color: @white;
+        border: none;
+
+        
+      }
+      input[type=submit]:hover {
+        opacity: 0.8;
+        transition-duration: 0.5s;
+      }
     }
     
+  
   }
-
-
-
-
 }   // home
+
+
+/* Add some padding and a grey background color to containers */
+
+/* Style the input elements and the submit button */
+
+
+/* Add margins to the checkbox */
+
+
+/* Style the submit button */
+
