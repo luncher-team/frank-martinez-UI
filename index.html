@@ -23,13 +23,13 @@
     <h1><a href="#">Luncher</a></h1>
     <ul>
       <li><a href="/" class="btn">Donate</a></li>
-      <li><a href="/" class="btn">Sign In</a></li>
+      <li><a href="/" class="btn">Sign-In</a></li>
     </ul>
   </nav>
 
   <section class="splash">
       <div class="splash-image">
-        <div class="splash-gradient"></div>
+        <div class="splash-overlay"></div>
       </div>
       <div class="tagline">
         <h2>Help feed children, today!</h2>
@@ -46,26 +46,26 @@
   <section class="container home">
     <section class="luncher-info" id="luncher-info">
       <div class="grid-col-2">
-        <p class="box icon"><i class="fas fa-info"></i></p>
-        <p class="box text">There are kids who need healthy meals at school
+        <p class=" icon"><i class="fas fa-info"></i></p>
+        <p class=" text">There are kids who need healthy meals at school
           <br>
           Find a school in need, today, and help feed hungry kids
         </p>
 
-        <p class="box icon"><i class="fas fa-school"></i></p>
-        <p class="box text">Help your school feed students in need
+        <p class=" icon"><i class="fas fa-school"></i></p>
+        <p class=" text">Help your school feed students in need
           <br>
           Register today
         </p>
 
-        <p class="box icon"><i class="fas fa-heart"></i></p>
-        <p class="box text">100% of your money goes to school lunches
+        <p class=" icon"><i class="fas fa-heart"></i></p>
+        <p class=" text">100% of your money goes to school lunches
           <br>
           and helps kids that need it the most
         </p>
 
-        <p class="box icon"><i class="fas fa-hand-holding-usd"></i></p>
-        <p class="box text">Register an account 
+        <p class=" icon"><i class="fas fa-hand-holding-usd"></i></p>
+        <p class=" text">Register an account 
           <br>
           and your donations could be tax-refunable
         </p>
@@ -78,13 +78,36 @@
 
     <section class="school-map">
       <div class="grid-col-1">
-        <p class="box description">
+        <p class=" description">
           <i class="icon fas fa-map-marked-alt"></i>
           <br>
           Find schools near you that need donations now
         </p>
-        <p class="box map" id="mapid">~this is a map~
+        <p class=" map" id="mapid">~this is a map~
         </p>
+      </div>
+    </section>
+
+
+
+    <section class="newsletter">
+      <div class="newsletter-overlay">
+        <form action="action_page.php">
+
+          <div class="container-form">
+            <h3>Subscribe to our Newsletter</h3>
+            <p>Stay up to date with the latest Luncher news</p>
+
+        
+
+            <input type="text" placeholder="Name" name="name" required>
+            <input type="text" placeholder="Email address" name="mail" required>
+            <div class="btn" type="submit">
+              Subscribe
+            </div>
+          </div>
+        
+        </form>
       </div>
     </section>
 
@@ -94,28 +117,28 @@
       <div class="grid-col-4">
         <h3>Contact Us</h3>
 
-        <p class="box icon">
+        <p class=" icon">
           <i class="fas fa-envelope"></i>
         </p>
-        <p class="box text" id="mapid">
+        <p class=" text" id="mapid">
           get@luncher.app
         </p>
         <a href=""><i class="social fab fa-twitter"></i></a>
         <p class="social-text">Follow us on Twitter!</p>
         
-        <p class="box icon">
+        <p class=" icon">
           <i class="fas fa-phone"></i>
         </p>
-        <p class="box text" id="mapid">
+        <p class=" text" id="mapid">
           1-800-YUM-GIFT
         </p>
         <a href=""><i class="social fab fa-patreon"></i></a>
         <p class="social-text">Be our patrons on Patreon!</p>
 
-        <p class="box icon">
+        <p class=" icon">
           <i class="fas fa-map-marker-alt"></i>
         </p>
-        <p class="box text" id="mapid">
+        <p class=" text" id="mapid">
           111 Yosemite Way<br>
           Mendocino, CA
         </p>
@@ -125,26 +148,7 @@
       </div>
     </section>
   
-    <section class="newsletter">
-      <form action="action_page.php">
-        <div class="container-form">
-          <h3>Subscribe to our Newsletter</h3>
-          <p>Lorem ipsum..</p>
-        </div>
-      
-        <div class="container-form" style="background-color:white">
-          <input type="text" placeholder="Name" name="name" required>
-          <input type="text" placeholder="Email address" name="mail" required>
-          <label>
-            <input type="checkbox" checked="checked" name="subscribe"> Daily Newsletter
-          </label>
-        </div>
-      
-        <div class="container-form">
-          <input type="submit" value="Subscribe">
-        </div>
-      </form>
-    </section>
+
     
 
 

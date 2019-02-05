@@ -1,6 +1,6 @@
 // Mixins
 // Color pointers
-@nav-bg: @white;
+@nav-bg: @dark;
 //@nav-bg-gradient: linear-gradient(@apple-red, @olive-green);
 @nav-font: @apple-red;
 @nav-border: @river-bend;
@@ -9,15 +9,15 @@
 @main-font-color: @river-bend;
 @main-border-color: @border-real;
 
-@footer-background: @apple-red;
-@footer-font-color: @apple-tan;
+@footer-background: @dark;
+@footer-font-color: @river-bend;
 @footer-border: @border-real;
 
 @button-bg-color: @river-bend;
 @border-real: @waterloo;
 
 @splash-bg-gradient: linear-gradient( rgba(@black, 1), rgba(@black, 0), rgba(@black, 0), rgba(@black, 0));
-
+@newsletter-bg-gradient: linear-gradient( rgba(@black, 1), rgba(@black, 0.5));
 
 // Color Vars
 @apple-yellow: #ffec86;
@@ -27,7 +27,7 @@
 @apple-pink: #e54a48;
 @apple-red: #bd3833;
 
-@clear-color: rgba(255,255,255,0);
+@clear-color: rgba(255,255,255,0.15);
 @white: #ffffff;
 @porcelain: #F6F7F8;
 @wild-sand: #F6F6F6;
@@ -38,9 +38,9 @@
 @black: #000000;
 
 // Breakpoints
-@phone: ~"(max-width: 500px)";
-@phone-small: ~"(max-width: 375px)";
-@small: ~"(min-width: 501px) and (max-width: 820px)";
+@phone-small: ~"(min-width: 0px) and (max-width: 350px)";
+@phone: ~"(min-width: 0px) and (max-width: 600px)";
+@medium: ~"(min-width: 601px) and (max-width: 820px)";
 
 
 // Transition duration
@@ -59,7 +59,7 @@
 }
 
 // Buttons
-.btn(@btn-bg-color; @btn-color; @btn-color-hover: @btn-bg-color; @btn-width: 50%; @btn-border-radius: 0; @btn-font-size: 1.8rem; @btn-padding: 8px 10px) {
+.btn(@btn-bg-color; @btn-color; @btn-color-hover: @btn-bg-color; @btn-bg-color-hover: @btn-color;@btn-width: 50%; @btn-border-radius: 0; @btn-font-size: 1.8rem; @btn-padding: 8px 10px) {
     background-color: @btn-bg-color;
     color: @btn-color;
     border-radius: @btn-border-radius;
@@ -74,12 +74,12 @@
     cursor: pointer;
     &:hover{
         color: @btn-color-hover;
-        background-color: @btn-color;
+        background-color: @btn-bg-color-hover;
         .transition(0.75s);
     }
     @media @phone {
-        width: 100%;
-        padding: 20px;
+        width: 70%;
+        
     }
 }
 

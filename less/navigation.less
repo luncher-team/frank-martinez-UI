@@ -5,15 +5,19 @@ nav {
   display: flex;
   // border-bottom: 1px solid @nav-border;
   // box-shadow: 0px 3px 10px 1px @nav-border;
-  z-index: 5;
+  z-index: 500;
   position: fixed;
   // .sticky-top(0);
+  @media @phone-small {
+    background-color: @nav-bg;
+  }
   h1 {
     align-self: flex-start;
     padding: 10px;
     width: 100%;
-    @media @phone-small {
-      font-size: 10vw;
+    @media @phone {
+      font-size: 3rem;
+      width: unset;
     }
     a {
       text-decoration: none;
@@ -26,28 +30,31 @@ nav {
     align-self: center;
     justify-content: flex-end;
     min-width: 200px;
+    @media @phone {
+      min-width: 160px;
+    }
     @media @phone-small {
       flex-direction: column;
-      text-align: center;
-      margin-top: -20px;
-      margin-bottom: 17px;
     }
+    // @media @phone-small {
+    //   flex-direction: column;
+    //   text-align: center;
+    //   margin-top: -20px;
+    //   margin-bottom: 17px;
+    // }
     li {
       padding: 5px 0;
       margin: 0 0 0 0;
       .border-style;
       .font-shadow;
-      @media @phone {
-        font-size: 1.2rem;
-        margin: 0;
-      }
-      @media @phone-small {
-        padding: 10px;
-        margin: 5px;
-      }
       .btn {
-        .btn(@clear-color; @white; @apple-red; 100%; 0px; 1.8rem; 2.4px 15px 2.4px 10px);
+        .btn(@clear-color; @white; @white; @apple-red; 100%; 0px; 1.8rem; 2.4px 15px 2.4px 10px);
         margin: 0 5px 0 0;
+        @media @phone {
+          font-size: 1.2rem;
+          margin: 0 10px 0 0;
+          padding: 3.7px 15px 3.7px 10px;
+        }
       }
       a {
         padding: 10px 20px;
@@ -55,13 +62,7 @@ nav {
         @media @phone {
           padding: 10px 10px;
         }
-        @media @phone-small {
-          width: 100%;
-          position: fixed;
-          left: 0;
-          text-transform: uppercase;
-          letter-spacing: 0.25rem;
-        }
+
       }
     }
   }

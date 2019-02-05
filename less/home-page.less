@@ -10,7 +10,7 @@
     position: relative;
     opacity: 0.92;
     filter: brightness(100%) contrast(90%);
-    .splash-gradient {
+    .splash-overlay {
       background: @splash-bg-gradient;
       background-attachment: fixed;
       height: 100%;
@@ -31,13 +31,16 @@
       margin: 0 auto;
       .border-style;
       .box-shadow(2px, 2px, 8px, rgba(0,0,0,0.75));
+      @media @phone {
+        width: 80%;
+      }
     }
   }
   .btn {
     display: flex;
     justify-content: center;
     margin: 0 auto;
-    .btn(@sea-shell; @apple-red; @sea-shell; 25%; 0px; 1.8rem);
+    .btn(@white; @apple-red; @white; @apple-red; 25%; 0px; 1.8rem);
     .border-style;
     z-index: 1;
   }
@@ -72,33 +75,63 @@ section a.divider {
     background-color: @dark;
     color: @porcelain;
     position: relative;
-    padding: 20%;
-
-    p {
-      text-align: center;
-      align-self: center; 
+    padding: 10% 20%;
+    @media @phone {
+      padding: 10%;
     }
-    .icon { 
-      font-size: 6rem;
+    @media @medium {
+      padding: 10%;
     }
-    .text {
-      font-size: 2.2rem;
+    @media @phone-small { // Give a little more vertical room on small displays. Take up more horiz space.
+      padding: 25% 5%;
     }
-    .btn {
-      grid-column: span 2;
-      display: flex;
-      justify-content: center;
-      margin: 0 auto;
-      .btn(@clear-color; @white; @apple-red; 33%; 0px; 1.8rem);
-      .border-style;
-      z-index: 1;
+    .grid-col-2 { // Change to 1 column for 600px and below
+      @media @phone {
+        grid-template-columns: 100%;
+        grid-gap: 10px 10px;
+      }
+      p {
+        text-align: center;
+        align-self: center; 
+      }
+      .icon { 
+        font-size: 6rem;
+        @media @phone { // create a one column grid on 600px and below
+          font-size: 3rem;
+          grid-column: 1;
+        }
+        @media @medium {
+          font-size: 4rem;
+        }
+      }
+      .text {
+        font-size: 2.2rem;
+        @media @phone { // create a one column grid on 600px and below
+          font-size: 1.4rem;
+          grid-column: 1;
+          padding-bottom: 20px;
+        }
+        @media @medium {
+          font-size: 2rem;
+        }
+      }
+      .btn {
+        grid-column: span 2;
+        display: flex;
+        justify-content: center;
+        margin: 0 auto;
+        .btn(@clear-color; @white; @white; @apple-red; 33%; 0px; 1.8rem);
+        .border-style;
+        z-index: 1;
+      }
     }
   }
+
   .school-map {
     background-color: @apple-yellow;
     color: @apple-pink;
     position: relative;
-    padding: 10% 0 5%;
+    padding: 5% 0;
     p {
       text-align: center; 
       .icon {
@@ -125,76 +158,105 @@ section a.divider {
       font-size: 1rem;
     }
   }
-  .contact {
-    background-color: @apple-green;
-    color: @white;
-    padding: 10% 20%;
-    .grid-col-4 {
-      align-items: center;
-      h3 {
-        grid-column: span 4;
-        text-align: center;
-        color: @white;
-      }
 
-      .icon, .social {
-        font-size: 4rem;
-        text-align: center;
-      }
-      .text, .social-text {
-        font-size: 2.2rem;
-      }
-      .icon { grid-column: 1; }
-      .text { grid-column: 2; }
-      .social { grid-column: 3; }
-      .social-text { grid-column: 4; }
-      a {
-        color: @white;
-        text-align: center;
-      }
-    }
-  }
   .newsletter {
     background-image: url("../assets/img/Fruit-bar-pic-Web-USDAgov.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    filter: grayscale(50%);
     color: @white;
-    .container-form {
-      padding: 20px;
-      h3 {
-        color: @white;
-        text-align: center;
-        .font-shadow;
-      }
-      p { text-align: center; }
-      input[type=text], input[type=submit] {
-        width: 100%;
-        padding: 12px;
-        margin: 8px 0;
-        display: inline-block;
-        border: 1px solid #ccc;
-        box-sizing: border-box;
-        input[type=checkbox] {
-          margin-top: 16px;
+    .newsletter-overlay {
+      background: @newsletter-bg-gradient;
+      // background-attachment: fixed;
+      height: 100%;
+      form {
+        padding: 0 0 20px 0;
+        .container-form {
+          padding: 5%;
+          margin: 0 auto;
+          text-align: center;
+          h3 {
+            color: @white;
+            text-align: center;
+            .font-shadow;
+          }
+          p { text-align: center; }
+          .btn {
+            grid-column: span 2;
+            display: flex;
+            justify-content: center;
+            margin: 0 auto;
+            .btn(@clear-color; @white; @white; @apple-red; 33%; 0px; 1.8rem);
+            .border-style;
+            z-index: 1;
+          }
+          input[type=text] {
+            width: 50%;
+            max-width: 600px;
+            padding: 12px;
+            margin: 8px 0;
+            border: 1px solid #ccc;
+            @media @phone {
+              width: 90%;
+              
+            }
+          }
         }
       }
-      input[type=submit] {
-        background-color: @apple-red;
-        color: @white;
-        border: none;
+    }
+  }
 
+
+  .contact {
+    background-color: @apple-green;
+    color: @white;
+    padding: 5% 15%;
+    @media @phone {
+      padding: 5% 5%;
+    }
+    .grid-col-4 {
+      align-items: center;
+      @media @phone { // Turn grid into a 3 column layout for <600px wide
+        grid-template-columns: 10% 80% 10%;
+      }
+      h3 {
+        grid-column: span 4;
+        text-align: center;
+        color: @apple-gold;
+        padding: 0 0 20px 0;
+      }
+
+      .icon, .social {
+        font-size: 2.5rem;
+        text-align: center;
+        align-self: baseline;
+      }
+      .text, .social-text {
+        font-size: 1.8rem;
+        margin-left: 10px;
+        align-self: auto;
+      }
+      .icon { grid-column: 1; }
+      .text { grid-column: 2; }
+      .social { grid-column: 3; }
+      .social-text { 
+        grid-column: 4; 
+        @media @phone {
+          display: none;
+        }
         
       }
-      input[type=submit]:hover {
-        opacity: 0.8;
-        transition-duration: 0.5s;
+      a {
+        color: @white;
+        text-align: center;
+        align-self: baseline;
       }
     }
+  }
+  
     
   
-  }
+  
 }   // home
 
 
