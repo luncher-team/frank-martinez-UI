@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
   <link href="https://fonts.googleapis.com/css?family=Arvo:400,700|Roboto" rel="stylesheet">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
   <link href="css/index.css" rel="stylesheet">
   <link href="css/leaflet.css" rel="stylesheet">
   <!--[if lt IE 9]>
@@ -22,103 +23,119 @@
   <meta name="theme-color" content="#ffffff">
 </head>
 
-<body>
+<body class="donate">
 
   <nav>
     <h1><a href="./index.html">Luncher</a></h1>
     <ul>
-      <li><a href="#" class="btn">Donate</a></li>
+      <!-- <li><a href="#" class="btn">Donate</a></li> -->
       <li><a href="./signin.html" class="btn">Sign-In</a></li>
     </ul>
   </nav>
 
-  <section class="splash">
-      <div class="splash-image">
-        <div class="splash-overlay"></div>
+
+
+  <section class="schools-by-state">
+    <h1>Donate</h1>
+    <div class="container">
+      <p>Filter school by state</p>
+      <div class="row">
+        <div class="col-6 col-sm-4 col-md-2 py-2 centered"><div class="state-labels"><a href="" class="btn">AL</a></div></div>
+        <div class="col-6 col-sm-4 col-md-2 py-2 centered"><div class="state-labels"><a href="" class="btn">CA</a></div></div>
+        <div class="col-6 col-sm-4 col-md-2 py-2 centered"><div class="state-labels"><a href="" class="btn">HI</a></div></div>
+        <div class="col-6 col-sm-4 col-md-2 py-2 centered"><div class="state-labels"><a href="" class="btn">NY</a></div></div>
+        <div class="col-6 col-sm-4 col-md-2 py-2 centered"><div class="state-labels"><a href="" class="btn">NV</a></div></div>
+        <div class="col-6 col-sm-4 col-md-2 py-2 centered"><div class="state-labels"><a href="" class="btn">OR</a></div></div>
+        <div class="col-6 col-sm-4 col-md-2 py-2 centered"><div class="state-labels"><a href="" class="btn">SC</a></div></div>
+        <div class="col-6 col-sm-4 col-md-2 py-2 centered"><div class="state-labels"><a href="" class="btn">TX</a></div></div>
+        <div class="col-6 col-sm-4 col-md-2 py-2 centered"><div class="state-labels"><a href="" class="btn">WA</a></div></div>
       </div>
-      <div class="tagline">
-        <h2>Help feed children, today!</h2>
-        <br>
-        <div class="btn">Donate</div>
-      </div>
-      
+    </div>
   </section>
-  
-  <section>
-    <a href="#luncher-info" class="divider"><i class="leading-arrow fas fa-arrow-alt-circle-down"></i></a>
-  </section>
-  
-  <section class="container home">
-    <section class="luncher-info" id="luncher-info">
-      <div class="grid-col-2">
-
-        <div class="btn">Sign-in or Register</div>
-
-        <p class=" icon"><i class="fas fa-info"></i></p>
-        <p class=" text">There are kids who need healthy meals at school
-          <br>
-          Find a school in need, today, and help feed hungry kids
-        </p>
-
-        <p class=" icon"><i class="fas fa-school"></i></p>
-        <p class=" text">Help your school feed students in need
-          <br>
-          Register today
-        </p>
-
-        <p class=" icon"><i class="fas fa-heart"></i></p>
-        <p class=" text">100% of your money goes to school lunches
-          <br>
-          and helps kids that need it the most
-        </p>
-
-        <p class=" icon"><i class="fas fa-hand-holding-usd"></i></p>
-        <p class=" text">Register an account 
-          <br>
-          and your donations could be tax-refunable
-        </p>
 
 
+  <section class="schools mb-5">
+    <div class="container-fluid">
+      <div class="row">
 
-        
-      </div>
-    </section>
-
-    <section class="school-map">
-      <div class="grid-col-1">
-        <p class=" description">
-          <i class="icon fas fa-map-marked-alt"></i>
-          <br>
-          Find schools near you that need donations now
-        </p>
-        <p class=" map" id="mapid">~this is a map~
-        </p>
-      </div>
-    </section>
-
-
-
-    <section class="newsletter">
-      <div class="newsletter-overlay">
-        <form action="action_page.php">
-
-          <div class="container-form">
-            <h3>Subscribe to our Newsletter</h3>
-            <p>Stay up to date with the latest Luncher news</p>
-            <input type="text" placeholder="Name" name="name" required>
-            <input type="text" placeholder="Email address" name="mail" required>
-            <div class="btn" type="submit">
-              Subscribe
+        <div class="col-12 col-sm-6 col-lg-4 my-4 centered">
+          <div class="card">
+            <img class="card-img-top" src="./assets/img/7995804478_c2fac1e07a_b.jpg" alt="Card image cap">
+            <div class="card-body">
+              <h4 class="card-title">Ruskin Elementary</h4>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              <p class="card-text italic">Needs $1063</p>
+              <a href="#" class="btn btn-primary">Donate</a>
             </div>
           </div>
-        
-        </form>
+        </div>
+
+        <div class="col-12 col-sm-6 col-lg-4 my-4 centered">
+          <div class="card">
+            <img class="card-img-top" src="./assets/img/PIXNIO-47256-1600-medium.jpeg" alt="Card image cap">
+            <div class="card-body">
+              <h4 class="card-title">Oakridge Elementary</h4>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              <p class="card-text italic">Needs $1113</p>
+              <a href="#" class="btn btn-primary">Donate</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 col-sm-6 col-lg-4 my-4 centered">
+          <div class="card">
+            <img class="card-img-top" src="./assets/img/070329-F-1020G-319-1600-medium.jpg" alt="Card image cap">
+            <div class="card-body">
+              <h4 class="card-title">Piedmont High School</h4>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              <p class="card-text italic">Needs $421</p>
+              <a href="#" class="btn btn-primary">Donate</a>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="col-12 col-sm-6 col-lg-4 my-4 centered">
+          <div class="card">
+            <img class="card-img-top" src="./assets/img/21953541749_e2b355be48_b.jpg" alt="Card image cap">
+            <div class="card-body">
+              <h4 class="card-title">Independance High School</h4>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              <p class="card-text italic">Needs $350</p>
+              <a href="#" class="btn btn-primary">Donate</a>
+            </div>
+          </div>
+        </div>
+
+
+
       </div>
-    </section>
+    </div>
+  </section>
+  
 
 
 
-    <section class="contact">
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <section>
+    <a href="#contact" class="divider"><i class="leading-arrow fas fa-arrow-alt-circle-down"></i></a>
+  </section>
+  
+  <section class="container-basic donate-footer">
+
+    <section class="contact" id="contact">
       <div class="grid-col-4">
         <h3>Contact Us</h3>
 
@@ -149,40 +166,15 @@
         </p>
         <a href=""><i class="social fas fa-share-square"></i></a> 
         <p class="social-text">Share this page!</p>
-
       </div>
     </section>
   
-
-    
-
-
-
-
-
-  
-  
-  
-    
-  
-  </section> <!-- container home -->
+  </section> 
 
 
   <footer>
     <p>Copyright Luncher 2019</p>
   </footer>
 </body>
-<script src="js/leaflet-src.js"></script>
-<script>
-  var mymap = L.map('mapid').setView([22.505, -120.09], 6);
-  L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}', {
-    attribution: '',
-    maxZoom: 35,
-    id: 'mapbox.streets',
-    accessToken: 'pk.eyJ1IjoidGV0cmFoZWRyb24iLCJhIjoiY2pycXNrcnRxMXM2bTQ0cG40OTR3cjNqNiJ9.MbZehg90Sww8NcivGWi5UQ'
-  }).addTo(mymap);
-  L.marker([37.505, -122.09]).addTo(mymap).bindPopup("<b>Ruskin Elementary School</b><br>Needs $950").openPopup();
-  // L.marker([30.505, -150.09]).addTo(mymap).bindPopup("<b>Jefferson High School</b><br>Needs $2,100").openPopup();
-  
-</script>
+
 </html>

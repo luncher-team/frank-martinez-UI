@@ -161,17 +161,27 @@ h2 {
 h3 {
   font-size: 2.8rem;
 }
+li {
+  font-size: 1.4rem;
+}
+a {
+  text-decoration: none;
+}
+a:hover {
+  color: initial;
+  text-decoration: none;
+}
 p {
   font-size: 1.6rem;
   line-height: 1.4;
 }
-li {
-  font-size: 1.4rem;
-}
-.container {
+.container-basic {
   max-width: 800px;
   width: 100%;
   margin: 0 auto;
+}
+.italic {
+  font-style: italic;
 }
 .grid-col-1 {
   display: grid;
@@ -198,8 +208,15 @@ li {
   max-width: 800px;
   margin: 0 auto;
 }
-a {
-  text-decoration: none;
+.grid-col-5 {
+  display: grid;
+  grid-template-columns: 20% 20% 20% 20% 20%;
+  max-width: 800px;
+  margin: 0 auto;
+}
+.centered {
+  float: none;
+  margin: 0 auto;
 }
 nav {
   width: 100%;
@@ -227,6 +244,9 @@ nav h1 a {
   text-decoration: none;
   color: #ffffff;
   text-shadow: 1px 1px 5px black;
+}
+nav h1 a:hover {
+  color: #ffffff;
 }
 nav ul {
   display: flex;
@@ -669,10 +689,6 @@ section a.divider .leading-arrow:hover {
   color: #ffffff;
   transition-duration: 0.5s;
 }
-/* Add some padding and a grey background color to containers */
-/* Style the input elements and the submit button */
-/* Add margins to the checkbox */
-/* Style the submit button */
 .sign-in-page .splash {
   height: 99%;
   -ms-transform: translate3d(0, 0, 0);
@@ -769,77 +785,73 @@ section a.divider .leading-arrow:hover {
   transform: scale(1.25);
   transition-duration: 0.5s;
 }
-.sign-in {
+.sign-in-footer {
   display: block;
   max-width: unset;
   width: 100%;
   background-color: #232323;
 }
-.sign-in .contact {
+.sign-in-footer .contact {
   background-color: #232323;
   color: #ffffff;
   padding: 5% 15%;
 }
 @media (min-width: 0px) and (max-width: 600px) {
-  .sign-in .contact {
+  .sign-in-footer .contact {
     padding: 5% 5%;
   }
 }
-.sign-in .contact .grid-col-4 {
+.sign-in-footer .contact .grid-col-4 {
   align-items: center;
 }
 @media (min-width: 0px) and (max-width: 600px) {
-  .sign-in .contact .grid-col-4 {
+  .sign-in-footer .contact .grid-col-4 {
     grid-template-columns: 10% 80% 10%;
   }
 }
-.sign-in .contact .grid-col-4 h3 {
+.sign-in-footer .contact .grid-col-4 h3 {
   grid-column: span 4;
   text-align: center;
   padding: 0 0 20px 0;
 }
-.sign-in .contact .grid-col-4 .icon,
-.sign-in .contact .grid-col-4 .social {
+.sign-in-footer .contact .grid-col-4 .icon,
+.sign-in-footer .contact .grid-col-4 .social {
   font-size: 2.1rem;
   text-align: center;
   align-self: baseline;
 }
-.sign-in .contact .grid-col-4 .text,
-.sign-in .contact .grid-col-4 .social-text {
+.sign-in-footer .contact .grid-col-4 .text,
+.sign-in-footer .contact .grid-col-4 .social-text {
   font-size: 1.4rem;
   margin-left: 10px;
   align-self: auto;
 }
-.sign-in .contact .grid-col-4 .icon {
+.sign-in-footer .contact .grid-col-4 .icon {
   grid-column: 1;
 }
-.sign-in .contact .grid-col-4 .text {
+.sign-in-footer .contact .grid-col-4 .text {
   grid-column: 2;
 }
-.sign-in .contact .grid-col-4 .social {
+.sign-in-footer .contact .grid-col-4 .social {
   grid-column: 3;
 }
-.sign-in .contact .grid-col-4 .social-text {
+.sign-in-footer .contact .grid-col-4 .social-text {
   grid-column: 4;
 }
 @media (min-width: 0px) and (max-width: 600px) {
-  .sign-in .contact .grid-col-4 .social-text {
+  .sign-in-footer .contact .grid-col-4 .social-text {
     display: none;
   }
 }
-.sign-in .contact .grid-col-4 a {
+.sign-in-footer .contact .grid-col-4 a {
   color: #ffffff;
   text-align: center;
   align-self: baseline;
 }
-.sign-in .contact .grid-col-4 a:hover {
+.sign-in-footer .contact .grid-col-4 a:hover {
   color: #ffffff;
   transition-duration: 0.5s;
 }
-/* Add some padding and a grey background color to containers */
-/* Style the input elements and the submit button */
-/* Add margins to the checkbox */
-/* Style the submit button */
 .reset-password .splash {
   height: 99%;
   -ms-transform: translate3d(0, 0, 0);
@@ -936,140 +948,107 @@ section a.divider .leading-arrow:hover {
   transform: scale(1.25);
   transition-duration: 0.5s;
 }
-.sign-in {
+.reset-password-footer {
   display: block;
   max-width: unset;
   width: 100%;
   background-color: #232323;
 }
-.sign-in .contact {
+.reset-password-footer .contact {
   background-color: #232323;
   color: #ffffff;
   padding: 5% 15%;
 }
 @media (min-width: 0px) and (max-width: 600px) {
-  .sign-in .contact {
+  .reset-password-footer .contact {
     padding: 5% 5%;
   }
 }
-.sign-in .contact .grid-col-4 {
+.reset-password-footer .contact .grid-col-4 {
   align-items: center;
 }
 @media (min-width: 0px) and (max-width: 600px) {
-  .sign-in .contact .grid-col-4 {
+  .reset-password-footer .contact .grid-col-4 {
     grid-template-columns: 10% 80% 10%;
   }
 }
-.sign-in .contact .grid-col-4 h3 {
+.reset-password-footer .contact .grid-col-4 h3 {
   grid-column: span 4;
   text-align: center;
   padding: 0 0 20px 0;
 }
-.sign-in .contact .grid-col-4 .icon,
-.sign-in .contact .grid-col-4 .social {
+.reset-password-footer .contact .grid-col-4 .icon,
+.reset-password-footer .contact .grid-col-4 .social {
   font-size: 2.1rem;
   text-align: center;
   align-self: baseline;
 }
-.sign-in .contact .grid-col-4 .text,
-.sign-in .contact .grid-col-4 .social-text {
+.reset-password-footer .contact .grid-col-4 .text,
+.reset-password-footer .contact .grid-col-4 .social-text {
   font-size: 1.4rem;
   margin-left: 10px;
   align-self: auto;
 }
-.sign-in .contact .grid-col-4 .icon {
+.reset-password-footer .contact .grid-col-4 .icon {
   grid-column: 1;
 }
-.sign-in .contact .grid-col-4 .text {
+.reset-password-footer .contact .grid-col-4 .text {
   grid-column: 2;
 }
-.sign-in .contact .grid-col-4 .social {
+.reset-password-footer .contact .grid-col-4 .social {
   grid-column: 3;
 }
-.sign-in .contact .grid-col-4 .social-text {
+.reset-password-footer .contact .grid-col-4 .social-text {
   grid-column: 4;
 }
 @media (min-width: 0px) and (max-width: 600px) {
-  .sign-in .contact .grid-col-4 .social-text {
+  .reset-password-footer .contact .grid-col-4 .social-text {
     display: none;
   }
 }
-.sign-in .contact .grid-col-4 a {
+.reset-password-footer .contact .grid-col-4 a {
   color: #ffffff;
   text-align: center;
   align-self: baseline;
 }
-.sign-in .contact .grid-col-4 a:hover {
+.reset-password-footer .contact .grid-col-4 a:hover {
   color: #ffffff;
   transition-duration: 0.5s;
 }
-/* Add some padding and a grey background color to containers */
-/* Style the input elements and the submit button */
-/* Add margins to the checkbox */
-/* Style the submit button */
-.sign-in-page .splash {
-  height: 99%;
-  -ms-transform: translate3d(0, 0, 0);
-  -webkit-transform: translate3d(0, 0, 0);
-  transform: translate3d(0, 0, 0);
+.donate .schools-by-state {
+  padding: 100px 0 50px 0;
 }
-.sign-in-page .splash .splash-image {
-  background-image: url("../assets/img/6082329903_ea18bfdc09_o-1600-medium.jpg");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-attachment: fixed;
-  top: 0;
-  height: 100%;
-  position: relative;
-  opacity: 0.95;
-}
-.sign-in-page .splash .splash-image .splash-overlay {
-  background: linear-gradient(#000000, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0), rgba(0, 0, 0, 0));
-  background-attachment: fixed;
-  height: 100%;
-}
-.sign-in-page .splash .login {
-  position: absolute;
-  left: 0;
-  top: 45%;
-  width: 100%;
+.donate .schools-by-state h1 {
   text-align: center;
-  color: #bd3833;
+  color: #232323;
 }
-.sign-in-page .splash .login input[type=text] {
-  width: 33%;
-  padding: 12px 20px;
-  margin: 8px 0;
-  border: 0;
-  border-left: 5px solid #bd3833;
+.donate .schools-by-state p {
+  text-align: center;
+  font-size: 1.6rem;
 }
-.sign-in-page .splash .login p {
-  text-shadow: 1px 1px 5px black;
+.donate .schools-by-state .row {
+  margin-top: 20px;
 }
-.sign-in-page .splash .login p a {
-  color: #bd3833;
+.donate .schools-by-state .row .state-labels {
+  font-size: 2rem;
+  text-align: center;
 }
-.sign-in-page .splash .btn {
-  display: flex;
-  justify-content: center;
-  margin: 8px auto 0;
-  background-color: #ffffff;
-  color: #bd3833;
-  border-radius: 0px;
+.donate .schools-by-state .row .state-labels a {
+  background-color: rgba(255, 255, 255, 0.15);
+  color: #81848E;
+  border-radius: 0;
   font-size: 1.8rem;
   font-weight: bolder;
   text-align: center;
-  width: 25%;
+  width: 33%;
   min-width: 100px;
-  padding: 8px 10px;
+  padding: 3px 6px;
   border: 0;
   text-decoration: none;
   cursor: pointer;
   border-left: 5px solid #bd3833;
-  z-index: 1;
 }
-.sign-in-page .splash .btn:hover {
+.donate .schools-by-state .row .state-labels a:hover {
   color: #ffffff;
   background-color: #bd3833;
   -webkit-transition-duration: 0.75s;
@@ -1077,7 +1056,38 @@ section a.divider .leading-arrow:hover {
   transition-duration: 0.75s;
 }
 @media (min-width: 0px) and (max-width: 600px) {
-  .sign-in-page .splash .btn {
+  .donate .schools-by-state .row .state-labels a {
+    width: 70%;
+  }
+}
+.donate .schools .container-fluid .row .card {
+  width: 100%;
+  margin: 0 auto;
+}
+.donate .schools .container-fluid .row .card a.btn {
+  background-color: #F1F1F1;
+  color: #bd3833;
+  border-radius: 0;
+  font-size: 1.8rem;
+  font-weight: bolder;
+  text-align: center;
+  width: 33%;
+  min-width: 100px;
+  padding: 3px 6px;
+  border: 0;
+  text-decoration: none;
+  cursor: pointer;
+  border-left: 5px solid #bd3833;
+}
+.donate .schools .container-fluid .row .card a.btn:hover {
+  color: #ffffff;
+  background-color: #bd3833;
+  -webkit-transition-duration: 0.75s;
+  -moz-transition-duration: 0.75s;
+  transition-duration: 0.75s;
+}
+@media (min-width: 0px) and (max-width: 600px) {
+  .donate .schools .container-fluid .row .card a.btn {
     width: 70%;
   }
 }
@@ -1100,74 +1110,70 @@ section a.divider .leading-arrow:hover {
   transform: scale(1.25);
   transition-duration: 0.5s;
 }
-.sign-in {
+.donate-footer {
   display: block;
   max-width: unset;
   width: 100%;
   background-color: #232323;
 }
-.sign-in .contact {
+.donate-footer .contact {
   background-color: #232323;
   color: #ffffff;
   padding: 5% 15%;
 }
 @media (min-width: 0px) and (max-width: 600px) {
-  .sign-in .contact {
+  .donate-footer .contact {
     padding: 5% 5%;
   }
 }
-.sign-in .contact .grid-col-4 {
+.donate-footer .contact .grid-col-4 {
   align-items: center;
 }
 @media (min-width: 0px) and (max-width: 600px) {
-  .sign-in .contact .grid-col-4 {
+  .donate-footer .contact .grid-col-4 {
     grid-template-columns: 10% 80% 10%;
   }
 }
-.sign-in .contact .grid-col-4 h3 {
+.donate-footer .contact .grid-col-4 h3 {
   grid-column: span 4;
   text-align: center;
   padding: 0 0 20px 0;
 }
-.sign-in .contact .grid-col-4 .icon,
-.sign-in .contact .grid-col-4 .social {
+.donate-footer .contact .grid-col-4 .icon,
+.donate-footer .contact .grid-col-4 .social {
   font-size: 2.1rem;
   text-align: center;
   align-self: baseline;
 }
-.sign-in .contact .grid-col-4 .text,
-.sign-in .contact .grid-col-4 .social-text {
+.donate-footer .contact .grid-col-4 .text,
+.donate-footer .contact .grid-col-4 .social-text {
   font-size: 1.4rem;
   margin-left: 10px;
   align-self: auto;
 }
-.sign-in .contact .grid-col-4 .icon {
+.donate-footer .contact .grid-col-4 .icon {
   grid-column: 1;
 }
-.sign-in .contact .grid-col-4 .text {
+.donate-footer .contact .grid-col-4 .text {
   grid-column: 2;
 }
-.sign-in .contact .grid-col-4 .social {
+.donate-footer .contact .grid-col-4 .social {
   grid-column: 3;
 }
-.sign-in .contact .grid-col-4 .social-text {
+.donate-footer .contact .grid-col-4 .social-text {
   grid-column: 4;
 }
 @media (min-width: 0px) and (max-width: 600px) {
-  .sign-in .contact .grid-col-4 .social-text {
+  .donate-footer .contact .grid-col-4 .social-text {
     display: none;
   }
 }
-.sign-in .contact .grid-col-4 a {
+.donate-footer .contact .grid-col-4 a {
   color: #ffffff;
   text-align: center;
   align-self: baseline;
 }
-.sign-in .contact .grid-col-4 a:hover {
+.donate-footer .contact .grid-col-4 a:hover {
   color: #ffffff;
   transition-duration: 0.5s;
 }
-/* Add some padding and a grey background color to containers */
-/* Style the input elements and the submit button */
-/* Add margins to the checkbox */
-/* Style the submit button */

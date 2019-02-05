@@ -1,56 +1,51 @@
-.sign-in-page { 
-  .splash {
-    height: 99%;
-    -ms-transform: translate3d(0, 0, 0);
-    -webkit-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0);
-    .splash-image {
-      background-image: url("../assets/img/6082329903_ea18bfdc09_o-1600-medium.jpg");
-      background-position: center;
-      background-repeat: no-repeat;
-      background-size: cover;
-      background-attachment: fixed;
-      top: 0;
-      height: 100%;
-      position: relative;
-      opacity: 0.95;
-      .splash-overlay {
-        background: @splash-bg-gradient;
-        background-attachment: fixed;
-        height: 100%;
-      }
-    }
-    .login {
-      position: absolute;
-      left: 0;
-      top: 45%;
-      width: 100%;
+.donate { 
+  .schools-by-state {
+    padding: 100px 0 50px 0;
+    // height: 99%;
+    // -ms-transform: translate3d(0, 0, 0);
+    // -webkit-transform: translate3d(0, 0, 0);
+    // transform: translate3d(0, 0, 0);
+    h1 {
       text-align: center;
-      color: @apple-red;
-      input[type=text] {
-        width: 33%;
-        padding: 12px 20px;
-        margin: 8px 0;
-        border: 0;
-        .border-style;
-      }
-      p {
-        .font-shadow;
+      color: @dark;
+    }
+    p {
+      text-align: center;
+      font-size: 1.6rem;
+    }
+    .row {
+      margin-top: 20px;
+      .state-labels {
+        font-size: 2rem;
+        text-align: center;
         a {
-          color: @apple-red;
+          .btn(@clear-color; @waterloo; @white; @apple-red; 33%; 0; 1.8rem; 3px 6px);
+          .border-style;
         }
       }
     }
-    .btn {
-      display: flex;
-      justify-content: center;
-      margin: 8px auto 0;
-      .btn(@white; @apple-red; @white; @apple-red; 25%; 0px; 1.8rem);
-      .border-style;
-      z-index: 1;
+  }
+
+  .schools {
+    .container-fluid {
+      .row {
+        .card {
+          width: 100%;
+          margin: 0 auto;
+          
+          a.btn {
+            .btn(@sea-shell; @apple-red; @white; @apple-red; 33%; 0; 1.8rem; 3px 6px);
+            .border-style;
+          }
+        }
+      }
     }
   }
+
 }
+
+
+
 
 
 section a.divider {
@@ -74,7 +69,7 @@ section a.divider {
 }
 
 
-.sign-in {
+.donate-footer {
   display: block;
   max-width: unset;
   width: 100%;
@@ -129,20 +124,5 @@ section a.divider {
       }
     }
   }
-  
-    
-  
-  
-}   // home
-
-
-/* Add some padding and a grey background color to containers */
-
-/* Style the input elements and the submit button */
-
-
-/* Add margins to the checkbox */
-
-
-/* Style the submit button */
+}   
 
