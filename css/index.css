@@ -454,7 +454,7 @@ section a.divider .leading-arrow:hover {
     grid-gap: 10px 10px;
   }
 }
-.home .luncher-info .grid-col-2 .btn {
+.home .luncher-info .grid-col-2 a {
   grid-column: span 2;
   display: flex;
   justify-content: center;
@@ -474,7 +474,7 @@ section a.divider .leading-arrow:hover {
   border-left: 5px solid #bd3833;
   z-index: 1;
 }
-.home .luncher-info .grid-col-2 .btn:hover {
+.home .luncher-info .grid-col-2 a:hover {
   color: #ffffff;
   background-color: #bd3833;
   -webkit-transition-duration: 0.75s;
@@ -482,7 +482,7 @@ section a.divider .leading-arrow:hover {
   transition-duration: 0.75s;
 }
 @media (min-width: 0px) and (max-width: 600px) {
-  .home .luncher-info .grid-col-2 .btn {
+  .home .luncher-info .grid-col-2 a {
     width: 70%;
   }
 }
