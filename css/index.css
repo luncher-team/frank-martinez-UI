@@ -202,7 +202,7 @@ li {
 nav {
   width: 100%;
   display: flex;
-  z-index: 500;
+  z-index: 1001;
   position: fixed;
 }
 @media (min-width: 0px) and (max-width: 600px) {
@@ -497,9 +497,11 @@ section a.divider .leading-arrow:hover {
 }
 .home .school-map {
   background-color: #ffec86;
-  color: #e54a48;
+  color: #9d6a4f;
   position: relative;
   padding: 5% 0;
+  z-index: 3;
+  box-shadow: 1px 1px 5px black;
 }
 .home .school-map p {
   text-align: center;
@@ -531,10 +533,14 @@ section a.divider .leading-arrow:hover {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  color: #ffffff;
+  background-attachment: fixed;
+  position: relative;
+  z-index: 2;
+  box-shadow: 1px 1px 5px black;
+  color: #e54a48;
 }
 .home .newsletter .newsletter-overlay {
-  background: linear-gradient(#000000, rgba(0, 0, 0, 0.5));
+  background: linear-gradient(#ffd25d, rgba(157, 106, 79, 0.75));
   height: 100%;
 }
 .home .newsletter .newsletter-overlay form {
@@ -546,9 +552,7 @@ section a.divider .leading-arrow:hover {
   text-align: center;
 }
 .home .newsletter .newsletter-overlay form .container-form h3 {
-  color: #ffffff;
   text-align: center;
-  text-shadow: 1px 1px 5px black;
 }
 .home .newsletter .newsletter-overlay form .container-form p {
   text-align: center;
@@ -557,9 +561,9 @@ section a.divider .leading-arrow:hover {
   grid-column: span 2;
   display: flex;
   justify-content: center;
-  margin: 0 auto;
+  margin: 10px auto 0;
   background-color: rgba(255, 255, 255, 0.15);
-  color: #ffffff;
+  color: #bd3833;
   border-radius: 0px;
   font-size: 1.8rem;
   font-weight: bolder;
@@ -599,7 +603,7 @@ section a.divider .leading-arrow:hover {
 }
 .home .contact {
   background-color: #ae9d27;
-  color: #ffffff;
+  color: #ffd25d;
   padding: 5% 15%;
 }
 @media (min-width: 0px) and (max-width: 600px) {
@@ -623,13 +627,13 @@ section a.divider .leading-arrow:hover {
 }
 .home .contact .grid-col-4 .icon,
 .home .contact .grid-col-4 .social {
-  font-size: 2.5rem;
+  font-size: 2.1rem;
   text-align: center;
   align-self: baseline;
 }
 .home .contact .grid-col-4 .text,
 .home .contact .grid-col-4 .social-text {
-  font-size: 1.8rem;
+  font-size: 1.4rem;
   margin-left: 10px;
   align-self: auto;
 }
@@ -651,9 +655,13 @@ section a.divider .leading-arrow:hover {
   }
 }
 .home .contact .grid-col-4 a {
-  color: #ffffff;
+  color: #ffd25d;
   text-align: center;
   align-self: baseline;
+}
+.home .contact .grid-col-4 a:hover {
+  color: #ffffff;
+  transition-duration: 0.5s;
 }
 /* Add some padding and a grey background color to containers */
 /* Style the input elements and the submit button */

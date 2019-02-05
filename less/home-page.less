@@ -139,9 +139,11 @@ section a.divider {
 
   .school-map {
     background-color: @apple-yellow;
-    color: @apple-pink;
+    color: @apple-tan;
     position: relative;
     padding: 5% 0;
+    z-index: 3;
+    .box-shadow;
     p {
       text-align: center; 
       .icon {
@@ -174,10 +176,13 @@ section a.divider {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    color: @white;
+    background-attachment: fixed;
+    position: relative;
+    z-index: 2;
+    .box-shadow;
+    color: @apple-pink;
     .newsletter-overlay {
       background: @newsletter-bg-gradient;
-      // background-attachment: fixed;
       height: 100%;
       form {
         padding: 0 0 20px 0;
@@ -186,17 +191,15 @@ section a.divider {
           margin: 0 auto;
           text-align: center;
           h3 {
-            color: @white;
             text-align: center;
-            .font-shadow;
           }
           p { text-align: center; }
           .btn {
             grid-column: span 2;
             display: flex;
             justify-content: center;
-            margin: 0 auto;
-            .btn(@clear-color; @white; @white; @apple-red; 33%; 0px; 1.8rem);
+            margin: 10px auto 0;
+            .btn(@clear-color; @apple-red; @white; @apple-red; 33%; 0px; 1.8rem);
             .border-style;
             z-index: 1;
           }
@@ -219,7 +222,7 @@ section a.divider {
 
   .contact {
     background-color: @apple-green;
-    color: @white;
+    color: @apple-gold;
     padding: 5% 15%;
     @media @phone {
       padding: 5% 5%;
@@ -237,12 +240,12 @@ section a.divider {
       }
 
       .icon, .social {
-        font-size: 2.5rem;
+        font-size: 2.1rem;
         text-align: center;
         align-self: baseline;
       }
       .text, .social-text {
-        font-size: 1.8rem;
+        font-size: 1.4rem;
         margin-left: 10px;
         align-self: auto;
       }
@@ -257,9 +260,13 @@ section a.divider {
         
       }
       a {
-        color: @white;
+        color: @apple-gold;
         text-align: center;
         align-self: baseline;
+        &:hover {
+          color: @white;
+          transition-duration: 0.5s;
+        }
       }
     }
   }
