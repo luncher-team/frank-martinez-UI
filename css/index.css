@@ -205,7 +205,7 @@ nav {
   z-index: 500;
   position: fixed;
 }
-@media (min-width: 0px) and (max-width: 350px) {
+@media (min-width: 0px) and (max-width: 600px) {
   nav {
     background-color: #232323;
   }
