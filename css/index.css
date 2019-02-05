@@ -252,7 +252,7 @@ nav ul {
   display: flex;
   align-self: center;
   justify-content: flex-end;
-  min-width: 200px;
+  min-width: 210px;
 }
 @media (min-width: 0px) and (max-width: 600px) {
   nav ul {
@@ -320,6 +320,9 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+html {
+  height: 100%;
 }
 .landing-page .splash {
   height: 99%;
@@ -1011,17 +1014,17 @@ section a.divider .leading-arrow:hover {
   color: #ffffff;
   transition-duration: 0.5s;
 }
-html {
+html.donate {
   height: unset;
 }
 .donate {
   background: linear-gradient(#1a1409, rgba(229, 218, 189, 0.5));
 }
-.donate nav {
+.donate nav.nav-solid {
   background-color: #232323;
   box-shadow: 1px 1px 5px black;
 }
-.donate nav li {
+.donate nav.nav-solid li {
   margin-right: 5px;
 }
 .donate .schools-by-state {
