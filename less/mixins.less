@@ -10,14 +10,18 @@
 @main-border-color: @border-real;
 
 @footer-background: @dark;
-@footer-font-color: @river-bend;
+@footer-font-color: @apple-tan;
 @footer-border: @border-real;
 
 @button-bg-color: @river-bend;
 @border-real: @waterloo;
 
-@splash-bg-gradient: linear-gradient( rgba(@black, 1), rgba(@black, 0), rgba(@black, 0), rgba(@black, 0));
-@newsletter-bg-gradient: linear-gradient( rgba(@apple-yellow, 0.75), rgba(@apple-tan, 0.75));
+// @splash-bg-gradient: linear-gradient( rgba(@black, 1), rgba(@black, 0), rgba(@black, 0), rgba(@black, 0));
+// @newsletter-bg-gradient: linear-gradient( rgba(@apple-yellow, 0.75), rgba(@apple-tan, 0.75));
+.bg-gradient(@bg-gradient-a; @bg-a-opacity; @bg-gradient-b; @bg-b-opacity) {
+    background: linear-gradient( rgba(@bg-gradient-a, @bg-a-opacity), rgba(@bg-gradient-b, @bg-b-opacity));
+}
+
 
 // Color Vars
 @apple-yellow: #ffec86;
@@ -26,6 +30,12 @@
 @apple-green: #ae9d27;
 @apple-pink: #e54a48;
 @apple-red: #bd3833;
+
+@luncher-beige: #E5DABD;
+@luncher-saddle: #AE4110;
+@luncher-sienna: #763C22;
+@luncher-dark-olive: #1A1409;
+@luncher-dark-khaki: #81905A;
 
 @clear-color: rgba(255,255,255,0.15);
 @white: #ffffff;
@@ -54,8 +64,9 @@
 .border-radius(@tl: 0; @tr: @tl; @bl: 0; @br: @bl) {
     border-radius: @tl @tr @bl @br;
 }
-.border-style(@border-style-width: 5px; @border-style-color: @apple-red) {
+.border-style(@border-style-width: 5px; @border-style-color: @luncher-saddle) {
     border-left: @border-style-width solid @border-style-color;
+    padding-right: @border-style-width * 2;
 }
 
 // Buttons

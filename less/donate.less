@@ -1,51 +1,59 @@
+html { height: unset; } // Fix the full splash height for page without splash
+
 .donate { 
-  .schools-by-state {
-    padding: 100px 0 50px 0;
-    // height: 99%;
-    // -ms-transform: translate3d(0, 0, 0);
-    // -webkit-transform: translate3d(0, 0, 0);
-    // transform: translate3d(0, 0, 0);
-    h1 {
-      text-align: center;
-      color: @dark;
-    }
-    p {
-      text-align: center;
-      font-size: 1.6rem;
-    }
-    .row {
-      margin-top: 20px;
-      .state-labels {
-        font-size: 2rem;
-        text-align: center;
-        a {
-          .btn(@clear-color; @waterloo; @white; @apple-red; 33%; 0; 1.8rem; 3px 6px);
-          .border-style;
-        }
-      }
+  .bg-gradient(@luncher-dark-olive;1;@luncher-beige;0.5);
+
+  nav {
+    background-color: @dark;
+    .box-shadow;
+    li { 
+      margin-right: 5px;
     }
   }
 
-  .schools {
-    .container-fluid {
+  .schools-by-state {
+    padding: 100px 0 50px 0;
+    color: @luncher-saddle;
+    .school-filter-bar {
+      background-color: @luncher-dark-olive;
+      padding: 10px 0;
+      h1 {
+        text-align: center;
+      }
+      p {
+        text-align: center;
+        font-size: 1.6rem;
+      }
       .row {
-        .card {
-          width: 100%;
-          margin: 0 auto;
-          
-          a.btn {
-            .btn(@sea-shell; @apple-red; @white; @apple-red; 33%; 0; 1.8rem; 3px 6px);
-            .border-style;
+        margin-top: 20px;
+        .state-labels {
+          font-size: 2rem;
+          text-align: center;
+          a {
+            .btn(@clear-color; @white; @luncher-beige; @luncher-saddle; 33%; 0; 1.8rem; 3px 6px);
+            .border-style(5px; @luncher-saddle);
+            .box-shadow;
           }
         }
       }
     }
   }
 
+  .schools {
+    .card {
+      color: @luncher-dark-olive;
+      background-color: @luncher-beige;
+      border: 0;
+      width: 100%;
+      margin: 0 auto;
+      a.btn {
+        .btn(@clear-color; @luncher-saddle; @white; @luncher-saddle; 33%; 0; 1.8rem; 3px 6px);
+        .border-style;
+      }
+    }
+  }
+
 }
-
-
-
 
 
 section a.divider {

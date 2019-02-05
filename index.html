@@ -85,13 +85,12 @@
     </section>
 
     <section class="school-map">
-      <div class="grid-col-1">
-        <p class=" description">
-          <i class="icon fas fa-map-marked-alt"></i>
-          <br>
+      <div>
+        <h3>Map of Schools</h3>
+        <p class="description">
           Find schools near you that need donations now
         </p>
-        <p class=" map" id="mapid">~this is a map~
+        <p class="map" id="mapid">
         </p>
       </div>
     </section>
@@ -182,7 +181,6 @@
     accessToken: 'pk.eyJ1IjoidGV0cmFoZWRyb24iLCJhIjoiY2pycXNrcnRxMXM2bTQ0cG40OTR3cjNqNiJ9.MbZehg90Sww8NcivGWi5UQ'
   }).addTo(mymap);
   L.marker([37.505, -122.09]).addTo(mymap).bindPopup("<b>Ruskin Elementary School</b><br>Needs $950").openPopup();
-  // L.marker([30.505, -150.09]).addTo(mymap).bindPopup("<b>Jefferson High School</b><br>Needs $2,100").openPopup();
-  
+
 </script>
 </html>

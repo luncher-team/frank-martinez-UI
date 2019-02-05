@@ -16,9 +16,10 @@
       height: 100%;
       position: relative;
       opacity: 0.92;
-      filter: brightness(100%) contrast(90%);
+      // filter: brightness(100%) contrast(90%);
       .splash-overlay {
-        background: @splash-bg-gradient;
+        // background: @splash-bg-gradient;
+        .bg-gradient(@black;1;@dark;0.25);
         background-attachment: fixed;
         height: 100%;
       }
@@ -26,7 +27,7 @@
     .tagline {
       position: absolute;
       left: 0;
-      top: 45%;
+      top: 35%;
       width: 100%;
       text-align: center;
       color: @apple-red;
@@ -147,36 +148,39 @@ section a.divider {
 
   .school-map {
     background-color: @apple-yellow;
-    color: @apple-tan;
+    color: @apple-red;
     position: relative;
     padding: 5% 0 0 0;
     z-index: 3;
     .box-shadow;
-    p {
-      text-align: center; 
-      .icon {
-        font-size: 6rem;
-        padding: 0 0 20px 0;
-      }
+
+    h3 {
+      text-align: center;
     }
-    .description {
-      grid-column-start: 1;
-      grid-column-end: 1;
-      grid-row-start: 1;
-      grid-row-end: 1;
-      font-size: 2.2rem;
+    p.description {
+      // grid-column-start: 1;
+      // grid-column-end: 1;
+      // grid-row-start: 1;
+      // grid-row-end: 1;
+      font-size: 1.6rem;
+      text-align: center;
+      // .icon {
+      //   font-size: 6rem;
+      //   padding: 0 0 20px 0;
+      // }
     }
     .map {
-      grid-column-start: 1;
-      grid-column-end: 1;
-      grid-row-start: 2;
-      grid-row-end: 2;
-      font-size: 2.2rem;
+      // grid-column-start: 1;
+      // grid-column-end: 1;
+      // grid-row-start: 2;
+      // grid-row-end: 2;
+      margin-top: 20px;
     }
     #mapid { 
       height: 400px; 
       font-size: 1rem;
     }
+    
   }
 
   .newsletter {
@@ -188,9 +192,10 @@ section a.divider {
     position: relative;
     z-index: 2;
     .box-shadow;
-    color: @apple-pink;
+    color: @apple-red;
     .newsletter-overlay {
-      background: @newsletter-bg-gradient;
+      .bg-gradient(@apple-yellow;0.75;@apple-tan;0.75);
+      // background: @newsletter-bg-gradient;
       height: 100%;
       form {
         padding: 0 0 20px 0;
@@ -230,7 +235,7 @@ section a.divider {
 
   .contact {
     background-color: @apple-tan;
-    color: @apple-gold;
+    color: @dark;
     padding: 5% 15%;
     @media @phone {
       padding: 5% 5%;
@@ -243,7 +248,6 @@ section a.divider {
       h3 {
         grid-column: span 4;
         text-align: center;
-        color: @apple-gold;
         padding: 0 0 20px 0;
       }
 
@@ -268,7 +272,7 @@ section a.divider {
         
       }
       a {
-        color: @apple-gold;
+        color: @dark;
         text-align: center;
         align-self: baseline;
         &:hover {

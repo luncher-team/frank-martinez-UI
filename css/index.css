@@ -267,7 +267,8 @@ nav ul {
 nav ul li {
   padding: 5px 0;
   margin: 0 0 0 0;
-  border-left: 5px solid #bd3833;
+  border-left: 5px solid #AE4110;
+  padding-right: 10px;
   text-shadow: 1px 1px 5px black;
 }
 nav ul li .btn {
@@ -287,7 +288,7 @@ nav ul li .btn {
 }
 nav ul li .btn:hover {
   color: #ffffff;
-  background-color: #bd3833;
+  background-color: #AE4110;
   -webkit-transition-duration: 0.75s;
   -moz-transition-duration: 0.75s;
   transition-duration: 0.75s;
@@ -313,7 +314,7 @@ nav ul li a {
   }
 }
 footer {
-  color: #454A59;
+  color: #9d6a4f;
   background: #232323;
   padding: 20px 0;
   display: flex;
@@ -336,17 +337,16 @@ footer {
   height: 100%;
   position: relative;
   opacity: 0.92;
-  filter: brightness(100%) contrast(90%);
 }
 .landing-page .splash .splash-image .splash-overlay {
-  background: linear-gradient(#000000, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0), rgba(0, 0, 0, 0));
+  background: linear-gradient(#000000, rgba(35, 35, 35, 0.25));
   background-attachment: fixed;
   height: 100%;
 }
 .landing-page .splash .tagline {
   position: absolute;
   left: 0;
-  top: 45%;
+  top: 35%;
   width: 100%;
   text-align: center;
   color: #bd3833;
@@ -356,7 +356,8 @@ footer {
   padding: 18px;
   width: 33%;
   margin: 0 auto;
-  border-left: 5px solid #bd3833;
+  border-left: 5px solid #AE4110;
+  padding-right: 10px;
   box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.75);
 }
 @media (min-width: 0px) and (max-width: 600px) {
@@ -380,7 +381,8 @@ footer {
   border: 0;
   text-decoration: none;
   cursor: pointer;
-  border-left: 5px solid #bd3833;
+  border-left: 5px solid #AE4110;
+  padding-right: 10px;
   z-index: 1;
 }
 .landing-page .splash .btn:hover {
@@ -471,7 +473,8 @@ section a.divider .leading-arrow:hover {
   border: 0;
   text-decoration: none;
   cursor: pointer;
-  border-left: 5px solid #bd3833;
+  border-left: 5px solid #AE4110;
+  padding-right: 10px;
   z-index: 1;
 }
 .home .luncher-info .grid-col-2 a:hover {
@@ -523,32 +526,21 @@ section a.divider .leading-arrow:hover {
 }
 .home .school-map {
   background-color: #ffec86;
-  color: #9d6a4f;
+  color: #bd3833;
   position: relative;
   padding: 5% 0 0 0;
   z-index: 3;
   box-shadow: 1px 1px 5px black;
 }
-.home .school-map p {
+.home .school-map h3 {
   text-align: center;
 }
-.home .school-map p .icon {
-  font-size: 6rem;
-  padding: 0 0 20px 0;
-}
-.home .school-map .description {
-  grid-column-start: 1;
-  grid-column-end: 1;
-  grid-row-start: 1;
-  grid-row-end: 1;
-  font-size: 2.2rem;
+.home .school-map p.description {
+  font-size: 1.6rem;
+  text-align: center;
 }
 .home .school-map .map {
-  grid-column-start: 1;
-  grid-column-end: 1;
-  grid-row-start: 2;
-  grid-row-end: 2;
-  font-size: 2.2rem;
+  margin-top: 20px;
 }
 .home .school-map #mapid {
   height: 400px;
@@ -563,7 +555,7 @@ section a.divider .leading-arrow:hover {
   position: relative;
   z-index: 2;
   box-shadow: 1px 1px 5px black;
-  color: #e54a48;
+  color: #bd3833;
 }
 .home .newsletter .newsletter-overlay {
   background: linear-gradient(rgba(255, 236, 134, 0.75), rgba(157, 106, 79, 0.75));
@@ -600,7 +592,8 @@ section a.divider .leading-arrow:hover {
   border: 0;
   text-decoration: none;
   cursor: pointer;
-  border-left: 5px solid #bd3833;
+  border-left: 5px solid #AE4110;
+  padding-right: 10px;
   z-index: 1;
 }
 .home .newsletter .newsletter-overlay form .container-form .btn:hover {
@@ -629,7 +622,7 @@ section a.divider .leading-arrow:hover {
 }
 .home .contact {
   background-color: #9d6a4f;
-  color: #ffd25d;
+  color: #232323;
   padding: 5% 15%;
 }
 @media (min-width: 0px) and (max-width: 600px) {
@@ -648,7 +641,6 @@ section a.divider .leading-arrow:hover {
 .home .contact .grid-col-4 h3 {
   grid-column: span 4;
   text-align: center;
-  color: #ffd25d;
   padding: 0 0 20px 0;
 }
 .home .contact .grid-col-4 .icon,
@@ -681,7 +673,7 @@ section a.divider .leading-arrow:hover {
   }
 }
 .home .contact .grid-col-4 a {
-  color: #ffd25d;
+  color: #232323;
   text-align: center;
   align-self: baseline;
 }
@@ -707,14 +699,14 @@ section a.divider .leading-arrow:hover {
   opacity: 0.95;
 }
 .sign-in-page .splash .splash-image .splash-overlay {
-  background: linear-gradient(#000000, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0), rgba(0, 0, 0, 0));
+  background: linear-gradient(#000000, rgba(35, 35, 35, 0.25));
   background-attachment: fixed;
   height: 100%;
 }
 .sign-in-page .splash .login {
   position: absolute;
   left: 0;
-  top: 45%;
+  top: 25%;
   width: 100%;
   text-align: center;
   color: #bd3833;
@@ -727,7 +719,8 @@ section a.divider .leading-arrow:hover {
   padding: 12px 20px;
   margin: 8px 0;
   border: 0;
-  border-left: 5px solid #bd3833;
+  border-left: 5px solid #AE4110;
+  padding-right: 10px;
 }
 .sign-in-page .splash .login p {
   text-shadow: 1px 1px 5px black;
@@ -751,7 +744,8 @@ section a.divider .leading-arrow:hover {
   border: 0;
   text-decoration: none;
   cursor: pointer;
-  border-left: 5px solid #bd3833;
+  border-left: 5px solid #AE4110;
+  padding-right: 10px;
   z-index: 1;
 }
 .sign-in-page .splash .btn:hover {
@@ -870,14 +864,14 @@ section a.divider .leading-arrow:hover {
   opacity: 0.95;
 }
 .reset-password .splash .splash-image .splash-overlay {
-  background: linear-gradient(#000000, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0), rgba(0, 0, 0, 0));
+  background: linear-gradient(#000000, rgba(35, 35, 35, 0.25));
   background-attachment: fixed;
   height: 100%;
 }
 .reset-password .splash .login {
   position: absolute;
   left: 0;
-  top: 45%;
+  top: 25%;
   width: 100%;
   text-align: center;
   color: #bd3833;
@@ -890,7 +884,8 @@ section a.divider .leading-arrow:hover {
   padding: 12px 20px;
   margin: 8px 0;
   border: 0;
-  border-left: 5px solid #bd3833;
+  border-left: 5px solid #AE4110;
+  padding-right: 10px;
 }
 .reset-password .splash .login p {
   text-shadow: 1px 1px 5px black;
@@ -914,7 +909,8 @@ section a.divider .leading-arrow:hover {
   border: 0;
   text-decoration: none;
   cursor: pointer;
-  border-left: 5px solid #bd3833;
+  border-left: 5px solid #AE4110;
+  padding-right: 10px;
   z-index: 1;
 }
 .reset-password .splash .btn:hover {
@@ -1015,27 +1011,44 @@ section a.divider .leading-arrow:hover {
   color: #ffffff;
   transition-duration: 0.5s;
 }
+html {
+  height: unset;
+}
+.donate {
+  background: linear-gradient(#1a1409, rgba(229, 218, 189, 0.5));
+}
+.donate nav {
+  background-color: #232323;
+  box-shadow: 1px 1px 5px black;
+}
+.donate nav li {
+  margin-right: 5px;
+}
 .donate .schools-by-state {
   padding: 100px 0 50px 0;
+  color: #AE4110;
 }
-.donate .schools-by-state h1 {
+.donate .schools-by-state .school-filter-bar {
+  background-color: #1A1409;
+  padding: 10px 0;
+}
+.donate .schools-by-state .school-filter-bar h1 {
   text-align: center;
-  color: #232323;
 }
-.donate .schools-by-state p {
+.donate .schools-by-state .school-filter-bar p {
   text-align: center;
   font-size: 1.6rem;
 }
-.donate .schools-by-state .row {
+.donate .schools-by-state .school-filter-bar .row {
   margin-top: 20px;
 }
-.donate .schools-by-state .row .state-labels {
+.donate .schools-by-state .school-filter-bar .row .state-labels {
   font-size: 2rem;
   text-align: center;
 }
-.donate .schools-by-state .row .state-labels a {
+.donate .schools-by-state .school-filter-bar .row .state-labels a {
   background-color: rgba(255, 255, 255, 0.15);
-  color: #81848E;
+  color: #ffffff;
   border-radius: 0;
   font-size: 1.8rem;
   font-weight: bolder;
@@ -1046,27 +1059,32 @@ section a.divider .leading-arrow:hover {
   border: 0;
   text-decoration: none;
   cursor: pointer;
-  border-left: 5px solid #bd3833;
+  border-left: 5px solid #AE4110;
+  padding-right: 10px;
+  box-shadow: 1px 1px 5px black;
 }
-.donate .schools-by-state .row .state-labels a:hover {
-  color: #ffffff;
-  background-color: #bd3833;
+.donate .schools-by-state .school-filter-bar .row .state-labels a:hover {
+  color: #E5DABD;
+  background-color: #AE4110;
   -webkit-transition-duration: 0.75s;
   -moz-transition-duration: 0.75s;
   transition-duration: 0.75s;
 }
 @media (min-width: 0px) and (max-width: 600px) {
-  .donate .schools-by-state .row .state-labels a {
+  .donate .schools-by-state .school-filter-bar .row .state-labels a {
     width: 70%;
   }
 }
-.donate .schools .container-fluid .row .card {
+.donate .schools .card {
+  color: #1A1409;
+  background-color: #E5DABD;
+  border: 0;
   width: 100%;
   margin: 0 auto;
 }
-.donate .schools .container-fluid .row .card a.btn {
-  background-color: #F1F1F1;
-  color: #bd3833;
+.donate .schools .card a.btn {
+  background-color: rgba(255, 255, 255, 0.15);
+  color: #AE4110;
   border-radius: 0;
   font-size: 1.8rem;
   font-weight: bolder;
@@ -1077,17 +1095,18 @@ section a.divider .leading-arrow:hover {
   border: 0;
   text-decoration: none;
   cursor: pointer;
-  border-left: 5px solid #bd3833;
+  border-left: 5px solid #AE4110;
+  padding-right: 10px;
 }
-.donate .schools .container-fluid .row .card a.btn:hover {
+.donate .schools .card a.btn:hover {
   color: #ffffff;
-  background-color: #bd3833;
+  background-color: #AE4110;
   -webkit-transition-duration: 0.75s;
   -moz-transition-duration: 0.75s;
   transition-duration: 0.75s;
 }
 @media (min-width: 0px) and (max-width: 600px) {
-  .donate .schools .container-fluid .row .card a.btn {
+  .donate .schools .card a.btn {
     width: 70%;
   }
 }
