@@ -2,10 +2,11 @@
 .splash {
   height: 99%;
   .splash-image {
-    background-image: url("../assets/img/6057054938_d952659baa_o.jpg");
+    background-image: url("../assets/img/6057054938_d952659baa_o-medium.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    background-attachment: fixed;
     height: 100%;
     position: relative;
     opacity: 0.92;
@@ -71,24 +72,40 @@ section a.divider {
   display: block;
   max-width: unset;
   width: 100%;
+  background-color: @dark;
+
   .luncher-info {
+    transform: rotate(10deg) skew(10deg);
+    width: 100%;
+    left: -0.7%;
     background-color: @dark;
     color: @porcelain;
     position: relative;
     padding: 10% 20%;
     @media @phone {
-      padding: 10%;
+      padding: 20%;
     }
     @media @medium {
-      padding: 10%;
+      padding: 20%;
     }
     @media @phone-small { // Give a little more vertical room on small displays. Take up more horiz space.
       padding: 25% 5%;
     }
     .grid-col-2 { // Change to 1 column for 600px and below
+      transform: rotate(-9.7deg) skew(-10deg);
+      left: 5%;
       @media @phone {
         grid-template-columns: 100%;
         grid-gap: 10px 10px;
+      }
+      .btn {
+        grid-column: span 2;
+        display: flex;
+        justify-content: center;
+        margin: 0 auto;
+        .btn(@clear-color; @white; @white; @apple-red; 33%; 0px; 1.8rem);
+        .border-style;
+        z-index: 1;
       }
       p {
         text-align: center;
@@ -106,23 +123,16 @@ section a.divider {
       }
       .text {
         font-size: 2.2rem;
+        margin-left: 20px;
         @media @phone { // create a one column grid on 600px and below
           font-size: 1.4rem;
           grid-column: 1;
           padding-bottom: 20px;
+          margin-left: unset;
         }
         @media @medium {
           font-size: 2rem;
         }
-      }
-      .btn {
-        grid-column: span 2;
-        display: flex;
-        justify-content: center;
-        margin: 0 auto;
-        .btn(@clear-color; @white; @white; @apple-red; 33%; 0px; 1.8rem);
-        .border-style;
-        z-index: 1;
       }
     }
   }
