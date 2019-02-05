@@ -1,0 +1,146 @@
+// Home Content
+.sign-in-page { 
+  .splash {
+    height: 99%;
+    -ms-transform: translate3d(0, 0, 0);
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+    .splash-image {
+      background-image: url("../assets/img/6082329903_ea18bfdc09_o-1600-medium.jpg");
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-attachment: fixed;
+      top: 0;
+      height: 100%;
+      position: relative;
+      opacity: 0.95;
+      .splash-overlay {
+        background: @splash-bg-gradient;
+        background-attachment: fixed;
+        height: 100%;
+      }
+    }
+    .login {
+      position: absolute;
+      left: 0;
+      top: 45%;
+      width: 100%;
+      text-align: center;
+      color: @apple-red;
+      input[type=text] {
+        width: 33%;
+        padding: 12px 20px;
+        margin: 8px 0;
+        border: 0;
+        .border-style;
+      }
+      p {
+        .font-shadow;
+      }
+    }
+    .btn {
+      display: flex;
+      justify-content: center;
+      margin: 8px auto 0;
+      .btn(@white; @apple-red; @white; @apple-red; 25%; 0px; 1.8rem);
+      .border-style;
+      z-index: 1;
+    }
+  }
+}
+
+
+section a.divider {
+  display: grid;
+  width: 100%;
+  margin-top: -3px;
+  text-decoration: none;
+  .leading-arrow {
+    background-color: @dark;
+    color: @white;
+    font-size: 5rem;
+    margin: -27px auto;
+    border-radius: 28px;
+    border: 2px solid @dark;
+    z-index: 3;
+    &:hover {
+      transform: scale(1.25);
+      transition-duration: 0.5s;
+    }
+  }
+}
+
+
+.sign-in {
+  display: block;
+  max-width: unset;
+  width: 100%;
+  background-color: @dark;
+
+  .contact {
+    background-color: @dark;
+    color: @white;
+    padding: 5% 15%;
+    @media @phone {
+      padding: 5% 5%;
+    }
+    .grid-col-4 {
+      align-items: center;
+      @media @phone { // Turn grid into a 3 column layout for <600px wide
+        grid-template-columns: 10% 80% 10%;
+      }
+      h3 {
+        grid-column: span 4;
+        text-align: center;
+        padding: 0 0 20px 0;
+      }
+
+      .icon, .social {
+        font-size: 2.1rem;
+        text-align: center;
+        align-self: baseline;
+      }
+      .text, .social-text {
+        font-size: 1.4rem;
+        margin-left: 10px;
+        align-self: auto;
+      }
+      .icon { grid-column: 1; }
+      .text { grid-column: 2; }
+      .social { grid-column: 3; }
+      .social-text { 
+        grid-column: 4; 
+        @media @phone {
+          display: none;
+        }
+        
+      }
+      a {
+        color: @white;
+        text-align: center;
+        align-self: baseline;
+        &:hover {
+          color: @white;
+          transition-duration: 0.5s;
+        }
+      }
+    }
+  }
+  
+    
+  
+  
+}   // home
+
+
+/* Add some padding and a grey background color to containers */
+
+/* Style the input elements and the submit button */
+
+
+/* Add margins to the checkbox */
+
+
+/* Style the submit button */
+
