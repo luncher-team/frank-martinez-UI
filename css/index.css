@@ -198,6 +198,9 @@ li {
   max-width: 800px;
   margin: 0 auto;
 }
+a {
+  text-decoration: none;
+}
 nav {
   width: 100%;
   display: flex;
@@ -700,6 +703,9 @@ section a.divider .leading-arrow:hover {
   text-align: center;
   color: #bd3833;
 }
+.sign-in-page .splash .login h3 {
+  text-shadow: 1px 1px 5px black;
+}
 .sign-in-page .splash .login input[type=text] {
   width: 33%;
   padding: 12px 20px;
@@ -709,6 +715,340 @@ section a.divider .leading-arrow:hover {
 }
 .sign-in-page .splash .login p {
   text-shadow: 1px 1px 5px black;
+}
+.sign-in-page .splash .login p a {
+  color: #bd3833;
+}
+.sign-in-page .splash .btn {
+  display: flex;
+  justify-content: center;
+  margin: 8px auto 0;
+  background-color: #ffffff;
+  color: #bd3833;
+  border-radius: 0px;
+  font-size: 1.8rem;
+  font-weight: bolder;
+  text-align: center;
+  width: 25%;
+  min-width: 100px;
+  padding: 8px 10px;
+  border: 0;
+  text-decoration: none;
+  cursor: pointer;
+  border-left: 5px solid #bd3833;
+  z-index: 1;
+}
+.sign-in-page .splash .btn:hover {
+  color: #ffffff;
+  background-color: #bd3833;
+  -webkit-transition-duration: 0.75s;
+  -moz-transition-duration: 0.75s;
+  transition-duration: 0.75s;
+}
+@media (min-width: 0px) and (max-width: 600px) {
+  .sign-in-page .splash .btn {
+    width: 70%;
+  }
+}
+section a.divider {
+  display: grid;
+  width: 100%;
+  margin-top: -3px;
+  text-decoration: none;
+}
+section a.divider .leading-arrow {
+  background-color: #232323;
+  color: #ffffff;
+  font-size: 5rem;
+  margin: -27px auto;
+  border-radius: 28px;
+  border: 2px solid #232323;
+  z-index: 3;
+}
+section a.divider .leading-arrow:hover {
+  transform: scale(1.25);
+  transition-duration: 0.5s;
+}
+.sign-in {
+  display: block;
+  max-width: unset;
+  width: 100%;
+  background-color: #232323;
+}
+.sign-in .contact {
+  background-color: #232323;
+  color: #ffffff;
+  padding: 5% 15%;
+}
+@media (min-width: 0px) and (max-width: 600px) {
+  .sign-in .contact {
+    padding: 5% 5%;
+  }
+}
+.sign-in .contact .grid-col-4 {
+  align-items: center;
+}
+@media (min-width: 0px) and (max-width: 600px) {
+  .sign-in .contact .grid-col-4 {
+    grid-template-columns: 10% 80% 10%;
+  }
+}
+.sign-in .contact .grid-col-4 h3 {
+  grid-column: span 4;
+  text-align: center;
+  padding: 0 0 20px 0;
+}
+.sign-in .contact .grid-col-4 .icon,
+.sign-in .contact .grid-col-4 .social {
+  font-size: 2.1rem;
+  text-align: center;
+  align-self: baseline;
+}
+.sign-in .contact .grid-col-4 .text,
+.sign-in .contact .grid-col-4 .social-text {
+  font-size: 1.4rem;
+  margin-left: 10px;
+  align-self: auto;
+}
+.sign-in .contact .grid-col-4 .icon {
+  grid-column: 1;
+}
+.sign-in .contact .grid-col-4 .text {
+  grid-column: 2;
+}
+.sign-in .contact .grid-col-4 .social {
+  grid-column: 3;
+}
+.sign-in .contact .grid-col-4 .social-text {
+  grid-column: 4;
+}
+@media (min-width: 0px) and (max-width: 600px) {
+  .sign-in .contact .grid-col-4 .social-text {
+    display: none;
+  }
+}
+.sign-in .contact .grid-col-4 a {
+  color: #ffffff;
+  text-align: center;
+  align-self: baseline;
+}
+.sign-in .contact .grid-col-4 a:hover {
+  color: #ffffff;
+  transition-duration: 0.5s;
+}
+/* Add some padding and a grey background color to containers */
+/* Style the input elements and the submit button */
+/* Add margins to the checkbox */
+/* Style the submit button */
+.reset-password .splash {
+  height: 99%;
+  -ms-transform: translate3d(0, 0, 0);
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+}
+.reset-password .splash .splash-image {
+  background-image: url("../assets/img/121208-F-AX764-027-1600-medium.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  top: 0;
+  height: 100%;
+  position: relative;
+  opacity: 0.95;
+}
+.reset-password .splash .splash-image .splash-overlay {
+  background: linear-gradient(#000000, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0), rgba(0, 0, 0, 0));
+  background-attachment: fixed;
+  height: 100%;
+}
+.reset-password .splash .login {
+  position: absolute;
+  left: 0;
+  top: 45%;
+  width: 100%;
+  text-align: center;
+  color: #bd3833;
+}
+.reset-password .splash .login h3 {
+  text-shadow: 1px 1px 5px black;
+}
+.reset-password .splash .login input[type=text] {
+  width: 33%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  border: 0;
+  border-left: 5px solid #bd3833;
+}
+.reset-password .splash .login p {
+  text-shadow: 1px 1px 5px black;
+}
+.reset-password .splash .login p a {
+  color: #bd3833;
+}
+.reset-password .splash .btn {
+  display: flex;
+  justify-content: center;
+  margin: 8px auto 0;
+  background-color: #ffffff;
+  color: #bd3833;
+  border-radius: 0px;
+  font-size: 1.8rem;
+  font-weight: bolder;
+  text-align: center;
+  width: 25%;
+  min-width: 100px;
+  padding: 8px 10px;
+  border: 0;
+  text-decoration: none;
+  cursor: pointer;
+  border-left: 5px solid #bd3833;
+  z-index: 1;
+}
+.reset-password .splash .btn:hover {
+  color: #ffffff;
+  background-color: #bd3833;
+  -webkit-transition-duration: 0.75s;
+  -moz-transition-duration: 0.75s;
+  transition-duration: 0.75s;
+}
+@media (min-width: 0px) and (max-width: 600px) {
+  .reset-password .splash .btn {
+    width: 70%;
+  }
+}
+section a.divider {
+  display: grid;
+  width: 100%;
+  margin-top: -3px;
+  text-decoration: none;
+}
+section a.divider .leading-arrow {
+  background-color: #232323;
+  color: #ffffff;
+  font-size: 5rem;
+  margin: -27px auto;
+  border-radius: 28px;
+  border: 2px solid #232323;
+  z-index: 3;
+}
+section a.divider .leading-arrow:hover {
+  transform: scale(1.25);
+  transition-duration: 0.5s;
+}
+.sign-in {
+  display: block;
+  max-width: unset;
+  width: 100%;
+  background-color: #232323;
+}
+.sign-in .contact {
+  background-color: #232323;
+  color: #ffffff;
+  padding: 5% 15%;
+}
+@media (min-width: 0px) and (max-width: 600px) {
+  .sign-in .contact {
+    padding: 5% 5%;
+  }
+}
+.sign-in .contact .grid-col-4 {
+  align-items: center;
+}
+@media (min-width: 0px) and (max-width: 600px) {
+  .sign-in .contact .grid-col-4 {
+    grid-template-columns: 10% 80% 10%;
+  }
+}
+.sign-in .contact .grid-col-4 h3 {
+  grid-column: span 4;
+  text-align: center;
+  padding: 0 0 20px 0;
+}
+.sign-in .contact .grid-col-4 .icon,
+.sign-in .contact .grid-col-4 .social {
+  font-size: 2.1rem;
+  text-align: center;
+  align-self: baseline;
+}
+.sign-in .contact .grid-col-4 .text,
+.sign-in .contact .grid-col-4 .social-text {
+  font-size: 1.4rem;
+  margin-left: 10px;
+  align-self: auto;
+}
+.sign-in .contact .grid-col-4 .icon {
+  grid-column: 1;
+}
+.sign-in .contact .grid-col-4 .text {
+  grid-column: 2;
+}
+.sign-in .contact .grid-col-4 .social {
+  grid-column: 3;
+}
+.sign-in .contact .grid-col-4 .social-text {
+  grid-column: 4;
+}
+@media (min-width: 0px) and (max-width: 600px) {
+  .sign-in .contact .grid-col-4 .social-text {
+    display: none;
+  }
+}
+.sign-in .contact .grid-col-4 a {
+  color: #ffffff;
+  text-align: center;
+  align-self: baseline;
+}
+.sign-in .contact .grid-col-4 a:hover {
+  color: #ffffff;
+  transition-duration: 0.5s;
+}
+/* Add some padding and a grey background color to containers */
+/* Style the input elements and the submit button */
+/* Add margins to the checkbox */
+/* Style the submit button */
+.sign-in-page .splash {
+  height: 99%;
+  -ms-transform: translate3d(0, 0, 0);
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+}
+.sign-in-page .splash .splash-image {
+  background-image: url("../assets/img/6082329903_ea18bfdc09_o-1600-medium.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  top: 0;
+  height: 100%;
+  position: relative;
+  opacity: 0.95;
+}
+.sign-in-page .splash .splash-image .splash-overlay {
+  background: linear-gradient(#000000, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0), rgba(0, 0, 0, 0));
+  background-attachment: fixed;
+  height: 100%;
+}
+.sign-in-page .splash .login {
+  position: absolute;
+  left: 0;
+  top: 45%;
+  width: 100%;
+  text-align: center;
+  color: #bd3833;
+}
+.sign-in-page .splash .login input[type=text] {
+  width: 33%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  border: 0;
+  border-left: 5px solid #bd3833;
+}
+.sign-in-page .splash .login p {
+  text-shadow: 1px 1px 5px black;
+}
+.sign-in-page .splash .login p a {
+  color: #bd3833;
 }
 .sign-in-page .splash .btn {
   display: flex;
