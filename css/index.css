@@ -307,6 +307,7 @@ footer {
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
+  top: 0;
   height: 100%;
   position: relative;
   opacity: 0.92;
