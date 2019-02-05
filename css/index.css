@@ -300,6 +300,9 @@ footer {
 }
 .splash {
   height: 99%;
+  -ms-transform: translate3d(0, 0, 0);
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
 }
 .splash .splash-image {
   background-image: url("../assets/img/6057054938_d952659baa_o-medium.jpg");
