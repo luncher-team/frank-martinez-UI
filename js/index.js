@@ -65,11 +65,10 @@ class IconSlideRight {
 }
 
 // Scroll Position
-// Shove in the last known position
-// The number correlates to scroller in the constructor
-// Scroller needs to be the starting point for the elements animation
-// Scroller is position from the top.
-doSomething = () => {
+// The first argument doesn't need adjustment. It's the current scroll position as determined by the event listener.
+// The second argument to the component is 'start slide position'.
+// The third and fourth arguments are elements to slide.
+slideFinder = () => {
   scroll_pos = new IconSlideLeft(last_known_scroll_position, 400, '.icon-left', '.text-left');
   scroll_pos = new IconSlideRight(last_known_scroll_position, 500, '.icon-right', '.text-right');
 }
@@ -79,12 +78,11 @@ window.addEventListener('scroll', () => {
 
   if (!ticking) {
     window.requestAnimationFrame( () => {
-      doSomething(last_known_scroll_position);
+      slideFinder(last_known_scroll_position);
       ticking = false;
     });
 
     ticking = true;
   }
 });
-
 
