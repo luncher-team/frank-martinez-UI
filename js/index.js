@@ -4,13 +4,15 @@ let ticking = false;
 
 
 // Slide from left component
+// Requires that elements be placed at some far left spot in the css
+// These components will bring them back into view 'left:0' and back out when scrolling down and up, respectively.
 class IconSlideLeft {
-  constructor(icon, scroller) {
-    this.icon = icon; // This doesn't do anything
+  constructor(icon, scroller, iconClassName, textClassName) {
+    this.icon = icon; // This doesn't do anything... but it's a good luck charm. Don't remove it.
     this.scrollPos = last_known_scroll_position;
 
-    this.iconLeft = document.querySelectorAll('.icon-left');
-    this.textLeft = document.querySelectorAll('.text-left');
+    this.iconLeft = document.querySelectorAll(iconClassName);
+    this.textLeft = document.querySelectorAll(textClassName);
     
     this.iconLeft.forEach(icon => { 
       if (this.scrollPos > scroller) {
@@ -33,13 +35,14 @@ class IconSlideLeft {
 }
 
 // Slide from right component
+// Identical to slide from left, just coming from the right and vice-versa.
 class IconSlideRight {
-  constructor(icon, scroller) {
+  constructor(icon, scroller, iconClassName, textClassName) {
     this.icon = icon;
     this.scrollPos = last_known_scroll_position;
 
-    this.iconRight = document.querySelectorAll('.icon-right');
-    this.textRight = document.querySelectorAll('.text-right');
+    this.iconRight = document.querySelectorAll(iconClassName);
+    this.textRight = document.querySelectorAll(textClassName);
 
     this.iconRight.forEach(icon => { 
       if (this.scrollPos > scroller) {
@@ -67,8 +70,8 @@ class IconSlideRight {
 // Scroller needs to be the starting point for the elements animation
 // Scroller is position from the top.
 doSomething = () => {
-  scroll_pos = new IconSlideLeft(last_known_scroll_position, 400);
-  scroll_pos = new IconSlideRight(last_known_scroll_position, 500);
+  scroll_pos = new IconSlideLeft(last_known_scroll_position, 400, '.icon-left', '.text-left');
+  scroll_pos = new IconSlideRight(last_known_scroll_position, 500, '.icon-right', '.text-right');
 }
 
 window.addEventListener('scroll', () => {
