@@ -1,7 +1,6 @@
 let last_known_scroll_position = 0;
 let ticking = false;
 
-
 // Build a component because that's what we do
 class IconSlide {
   constructor(icon) {
@@ -27,8 +26,8 @@ class IconSlide {
       if (this.scrollPos > 400) {
         text.style = 'left: 0';
       }
-      if (this.scrollPos < 375) {
-        text.style = 'left: -10000px';
+      if (this.scrollPos < 355) {
+        text.style = 'left: -1500px';
       }
     });
 
@@ -46,7 +45,7 @@ class IconSlide {
         text.style = 'right: 0';
       }
       if (this.scrollPos < 475) {
-        text.style = 'right: -1000px';
+        text.style = 'right: -1500px';
       }
     });
 
@@ -57,16 +56,15 @@ class IconSlide {
 
 // Scroll Position
 // Shove in the last known position
-function doSomething(scroll_pos) {
-  console.log(scroll_pos);
+function doSomething() {
   scroll_pos = new IconSlide(last_known_scroll_position);
 }
 
-window.addEventListener('scroll', function(e) {
+window.addEventListener('scroll', () => {
   last_known_scroll_position = window.scrollY;
 
   if (!ticking) {
-    window.requestAnimationFrame(function() {
+    window.requestAnimationFrame( () => {
       doSomething(last_known_scroll_position);
       ticking = false;
     });
