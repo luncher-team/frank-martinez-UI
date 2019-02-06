@@ -31,11 +31,16 @@
         .font-shadow;
       }
       input[type=text] {
-        width: 33%;
+        width: 75%;
+        max-width: 475px;
         padding: 12px 20px;
         margin: 8px 0;
         border: 0;
         .border-style;
+        @media @phone {
+          width: 85%;
+          
+        }
       }
       p {
         .font-shadow;
@@ -62,12 +67,12 @@ section a.divider {
   margin-top: -3px;
   text-decoration: none;
   .leading-arrow {
-    background-color: @dark;
-    color: @white;
+    background-color: @luncher-dark-olive;
+    color: @luncher-beige;
     font-size: 5rem;
     margin: -27px auto;
     border-radius: 28px;
-    border: 2px solid @dark;
+    border: 2px solid @luncher-dark-olive;
     z-index: 3;
     &:hover {
       transform: scale(1.25);
@@ -84,11 +89,14 @@ section a.divider {
   background-color: @dark;
 
   .contact {
-    background-color: @dark;
-    color: @white;
+    background-color: @luncher-dark-olive;
+    color: @luncher-tan;
     padding: 5% 15%;
     @media @phone {
-      padding: 5% 5%;
+      padding: 10% 5%;
+    }
+    @media @phone-small {
+      padding: 15% 5%;
     }
     .grid-col-4 {
       align-items: center;
@@ -122,7 +130,7 @@ section a.divider {
         
       }
       a {
-        color: @white;
+        color: @luncher-tan;
         text-align: center;
         align-self: baseline;
         &:hover {

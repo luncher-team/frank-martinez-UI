@@ -1,26 +1,23 @@
 // Mixins
 // Color pointers
 @nav-bg: @dark;
-//@nav-bg-gradient: linear-gradient(@apple-red, @olive-green);
 @nav-font: @apple-red;
 @nav-border: @river-bend;
 
 @header-font-color: @apple-red;
-@main-font-color: @river-bend;
-@main-border-color: @border-real;
+@main-font-color: @black;
+// @main-border-color: @border-real;
 
-@footer-background: @dark;
+@footer-background: @luncher-dark-olive;
 @footer-font-color: @apple-tan;
-@footer-border: @border-real;
+// @footer-border: @border-real;
 
 @button-bg-color: @river-bend;
 @border-real: @waterloo;
 
-// @splash-bg-gradient: linear-gradient( rgba(@black, 1), rgba(@black, 0), rgba(@black, 0), rgba(@black, 0));
-// @newsletter-bg-gradient: linear-gradient( rgba(@apple-yellow, 0.75), rgba(@apple-tan, 0.75));
 .bg-gradient(@bg-gradient-a; @bg-a-opacity; @bg-gradient-b; @bg-b-opacity) {
-    background: linear-gradient( rgba(@bg-gradient-a, @bg-a-opacity), rgba(@bg-gradient-b, @bg-b-opacity));
-}
+  background: linear-gradient( rgba(@bg-gradient-a, @bg-a-opacity), rgba(@bg-gradient-b, @bg-b-opacity));
+};
 
 
 // Color Vars
@@ -32,10 +29,12 @@
 @apple-red: #bd3833;
 
 @luncher-beige: #E5DABD;
+@luncher-tan: #9d6a4f; // Added a mid-saturated shade
 @luncher-saddle: #AE4110;
 @luncher-sienna: #763C22;
-@luncher-dark-olive: #1A1409;
+@luncher-dark-olive: rgb(24, 20, 15); // Modified dark olive to be a little less saturated
 @luncher-dark-khaki: #81905A;
+// @luncher-dark-olive: #1A1409; 
 
 @clear-color: rgba(255,255,255,0.15);
 @white: #ffffff;
@@ -55,91 +54,94 @@
 
 // Transition duration
 .transition(@duration) {
-    -webkit-transition-duration: @duration;
-    -moz-transition-duration: @duration;
-    transition-duration: @duration;
+  -webkit-transition-duration: @duration;
+  -moz-transition-duration: @duration;
+  transition-duration: @duration;
 }
 
 // Border
 .border-radius(@tl: 0; @tr: @tl; @bl: 0; @br: @bl) {
-    border-radius: @tl @tr @bl @br;
+  border-radius: @tl @tr @bl @br;
 }
 .border-style(@border-style-width: 5px; @border-style-color: @luncher-saddle) {
-    border-left: @border-style-width solid @border-style-color;
-    padding-right: @border-style-width * 2;
+  border-left: @border-style-width solid @border-style-color;
+  padding-right: @border-style-width * 2;
 }
 
 // Buttons
 .btn(@btn-bg-color; @btn-color; @btn-color-hover: @btn-bg-color; @btn-bg-color-hover: @btn-color;  @btn-width: 50%;  @btn-border-radius: 0;  @btn-font-size: 1.8rem;  @btn-padding: 8px 10px) {
-    background-color: @btn-bg-color;
-    color: @btn-color;
-    border-radius: @btn-border-radius;
-    font-size: @btn-font-size;
-    font-weight: bolder;
-    text-align: center;
-    width: @btn-width;
-    min-width: 100px;
-    padding: @btn-padding;
-    border: 0;
-    text-decoration: none;
-    cursor: pointer;
-    &:hover{
-        color: @btn-color-hover;
-        background-color: @btn-bg-color-hover;
-        .transition(0.75s);
-    }
-    @media @phone {
-        width: 70%;
-        
-    }
+  background-color: @btn-bg-color;
+  color: @btn-color;
+  border-radius: @btn-border-radius;
+  font-size: @btn-font-size;
+  font-weight: bolder;
+  text-align: center;
+  width: @btn-width;
+  min-width: 100px;
+  padding: @btn-padding;
+  border: 0;
+  text-decoration: none;
+  cursor: pointer;
+  &:hover{
+    color: @btn-color-hover;
+    background-color: @btn-bg-color-hover;
+    .transition(0.75s);
+  }
+  @media @phone {
+    width: 70%;
+  }
 }
 
 // Links
 .link(@link-fg-color; @link-bg-color; @link-bold: 600) {
-    color: @link-fg-color;
-    background-color: unset;
+  color: @link-fg-color;
+  background-color: unset;
+  font-weight: @link-bold;
+  text-decoration: none;
+  &:hover {
+    color: @link-bg-color;
+    background-color: @link-fg-color;
     font-weight: @link-bold;
-    text-decoration: none;
-    &:hover {
-        color: @link-bg-color;
-        background-color: @link-fg-color;
-        font-weight: @link-bold;
-        .border-radius(10px; 10px; 0; 0);
-        .transition(0.75s);
-        @media @phone {
-            .border-radius(5px; 5px; 0; 0);
-        }
-        @media @phone-small {
-            .border-radius(0; 0; 0; 0);
-            letter-spacing: 0.75rem;
-        }
+    .border-radius(10px; 10px; 0; 0);
+    .transition(0.75s);
+    @media @phone {
+      .border-radius(5px; 5px; 0; 0);
     }
+    @media @phone-small {
+      .border-radius(0; 0; 0; 0);
+      letter-spacing: 0.75rem;
+    }
+  }
 }
 
 // Positioning
 .sticky-top(@top-pos) {
-    position: sticky;
-    top: @top-pos;
+  position: sticky;
+  top: @top-pos;
 }
 
 
 // Fonts
 .font-body {
-    font-family: 'Roboto', sans-serif;
-    font-weight: 400;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
 }
 .font-title(@weight: 700) {
-    font-family: 'Arvo', serif;
-    font-weight: @weight;
+  font-family: 'Arvo', serif;
+  font-weight: @weight;
+}
+.font-logo {
+  font-family: 'Schoolbell', cursive;
+  font-weight: 400;
 }
 
 
 // shadows
 .font-shadow(@font-shadow-x: 1px;@font-shadow-y: 1px;@font-shadow-blur: 5px;@font-shadow-color: black) {
-    text-shadow: @font-shadow-x @font-shadow-y @font-shadow-blur @font-shadow-color;
+  text-shadow: @font-shadow-x @font-shadow-y @font-shadow-blur @font-shadow-color;
 }
 .box-shadow(@box-shadow-x: 1px;@box-shadow-y: 1px;@box-shadow-blur: 5px;@box-shadow-color: black) {
-    box-shadow: @box-shadow-x @box-shadow-y @box-shadow-blur @box-shadow-color;
+  box-shadow: @box-shadow-x @box-shadow-y @box-shadow-blur @box-shadow-color;
 }
 
 

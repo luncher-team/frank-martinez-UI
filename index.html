@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <title>Luncher</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-  <link href="https://fonts.googleapis.com/css?family=Arvo:400,700|Roboto" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Schoolbell|Arvo:400,700|Roboto" rel="stylesheet">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
   <link href="css/index.css" rel="stylesheet">
   <link href="css/leaflet.css" rel="stylesheet">
@@ -50,37 +50,39 @@
   
   <section class="container-basic home">
     <section class="luncher-info" id="luncher-info">
-      <div class="grid-col-2">
+      <a href="./signin.html"><div class="btn">Sign-in or Register</div></a>
 
-        <a href="./signin.html"><div class="btn">Sign-in or Register</div></a>
+      <div class="grid">
 
-        <p class=" icon"><i class="fas fa-info"></i></p>
-        <p class=" text">There are kids who need healthy meals at school
+
+
+        <p class=" icon-left "><i class="fas fa-info"></i></p>
+        <p class=" text-right ">There are kids who need healthy meals at school
           <br>
           Find a school in need, today, and help feed hungry kids
         </p>
 
-        <p class=" icon"><i class="fas fa-school"></i></p>
-        <p class=" text">Help your school feed students in need
-          <br>
-          Register today
+        
+        
+        <p class=" text-left ">Register today and help a school feed students in need
         </p>
+        <p class=" icon-right "><i class="fas fa-school"></i></p>
 
-        <p class=" icon"><i class="fas fa-heart"></i></p>
-        <p class=" text">100% of your money goes to school lunches
-          <br>
-          and helps kids that need it the most
-        </p>
 
-        <p class=" icon"><i class="fas fa-hand-holding-usd"></i></p>
-        <p class=" text">Register an account 
-          <br>
-          and your donations could be tax-refunable
-        </p>
-
+        <p class=" icon-left "><i class="fas fa-hand-holding-usd"></i></p>
+        <p class=" text-right ">Sign-up and your donations are tax-deductable
+          </p>
+        
 
 
         
+        <p class=" text-left ">100% of your money goes to school lunches
+          <br>
+          and helps kids that need it the most
+        </p>
+        <p class=" icon-right "><i class="fas fa-heart"></i></p>
+
+       
       </div>
     </section>
 
@@ -151,18 +153,7 @@
 
       </div>
     </section>
-  
-
-    
-
-
-
-
-
-  
-  
-  
-    
+     
   
   </section> <!-- container home -->
 
@@ -172,6 +163,7 @@
   </footer>
 </body>
 <script src="js/leaflet-src.js"></script>
+<script src="js/index.js"></script>
 <script>
   var mymap = L.map('mapid').setView([22.505, -120.09], 6);
   L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}', {
