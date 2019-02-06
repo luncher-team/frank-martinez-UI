@@ -37,7 +37,7 @@ html { height: 100%; }
         max-width: 420px;
         margin: 0 auto;
         .border-style;
-        .box-shadow(2px, 2px, 8px, rgba(0,0,0,0.75));
+        .box-shadow(2px; 2px; 8px; 0px; rgba(0,0,0,0.75));
         @media @phone {
           width: 80%;
         }
@@ -50,7 +50,7 @@ html { height: 100%; }
       max-width: 380px;
       .btn(@white; @luncher-saddle; @white; @luncher-saddle; 25%; 0px; 1.8rem);
       .border-style;
-      .box-shadow;
+      .box-shadow(2px; 2px; 8px; 0px; rgba(0,0,0,0.75));
       z-index: 1;
     }
   }
@@ -69,7 +69,7 @@ section a.divider {
     margin: -27px auto;
     border-radius: 28px;
     border: 2px solid @luncher-dark-olive;
-    z-index: 3;
+    z-index: 5;
     &:hover {
       transform: scale(1.25);
       transition-duration: 0.5s;
@@ -92,6 +92,8 @@ section a.divider {
     color: @white;
     position: relative;
     padding: 10% 20%;
+    .box-shadow(0px;6px;20px;3px;@dark);
+    z-index: 4;
     @media @phone { padding: 20%; }
     @media @medium { padding: 20%; }
     @media @phone-small { padding: 25% 5%; } // Give a little more vertical room on small displays. Take up more horiz space.
@@ -106,70 +108,89 @@ section a.divider {
     }
     .grid { // Change to 1 column for 600px and below
       // transform: rotate(-9.7deg) skew(-10deg); left: 5%; // Optional rotated div effect
-      display: grid;
-      grid-template-columns: 10% 80% 10%;
-      grid-gap: 50px 0px;
+      // display: grid;
+      // grid-template-columns: 10% 80% 10%;
+      // grid-gap: 50px 0px;
       max-width: 800px;
       margin: 0 auto;
       @media @phone {
         grid-template-columns: 100%;
         grid-gap: 10px 10px;
       }
-      p {
-        align-self: center; 
-      }
-      .icon-left { 
-        font-size: 6rem;
-        grid-column: 1;
-        text-align: center;
-        @media @phone { // create a one column grid on 600px and below
-          font-size: 3rem;
-          grid-column: 1;
+      .icon-slider {
+        display: grid;
+        grid-template-columns: 10% 80% 10%;
+        grid-gap: 50px 0px;
+        p {
+          align-self: center; 
         }
-        @media @medium { font-size: 4rem; }
-      }
-      .text-right {
-        font-size: 2.2rem;
-        margin-left: 20px;
-        grid-column: span 2;
-        text-align: left;
-        @media @phone { // create a one column grid on 600px and below
-          font-size: 1.4rem;
+        .icon-left { 
+          font-size: 6rem;
           grid-column: 1;
-          padding-bottom: 20px;
-          margin-left: unset;
+          text-align: center;
+          left: -1000px;
+          position: relative;
+          transition-duration: 1s;
+          @media @phone { // create a one column grid on 600px and below
+            font-size: 3rem;
+            grid-column: 1;
+          }
+          @media @medium { font-size: 4rem; }
         }
-        @media @medium { font-size: 2rem; }
-      }
-      .icon-right { 
-        font-size: 6rem;
-        grid-column: 3;
-        text-align: center;
-        @media @phone { // create a one column grid on 600px and below
-          font-size: 3rem;
-          grid-column: 1;
+        .text-left {
+          font-size: 2.2rem;
+          margin-left: 20px;
+          grid-column: span 2;
+          text-align: left;
+          left: -10000px;
+          position: relative;
+          transition-duration: 1s;
+          @media @phone { // create a one column grid on 600px and below
+            font-size: 1.4rem;
+            grid-column: 1;
+            padding-bottom: 20px;
+            margin-left: unset;
+          }
+          @media @medium { font-size: 2rem; }
         }
-        @media @medium { font-size: 4rem; }
-      }
-      .text-left {
-        font-size: 2.2rem;
-        margin-right: 20px;
-        grid-column: span 2;
-        text-align: right;
-        @media @phone { // create a one column grid on 600px and below
-          font-size: 1.4rem;
-          grid-column: 1;
-          padding-bottom: 20px;
-          margin-left: unset;
+        .icon-right { 
+          font-size: 6rem;
+          grid-column: 3;
+          text-align: center;
+          right: -1000px;
+          position: relative;
+          transition-duration: 1s;
+          @media @phone { // create a one column grid on 600px and below
+            font-size: 3rem;
+            grid-column: 1;
+          }
+          @media @medium { font-size: 4rem; }
         }
-        @media @medium { font-size: 2rem; }
+        .text-right {
+          font-size: 2.2rem;
+          margin-right: 20px;
+          grid-column: span 2;
+          text-align: right;
+          right: -10000px;
+          position: relative;
+          transition-duration: 1s;
+          @media @phone { // create a one column grid on 600px and below
+            font-size: 1.4rem;
+            grid-column: 1;
+            padding-bottom: 20px;
+            margin-left: unset;
+          }
+          @media @medium { font-size: 2rem; }
+        }
       }
+
+      
     }
   }
 
   .school-map {
-    background-color: @luncher-beige;
-    color: @luncher-saddle;
+    background-color: @luncher-dark-khaki;
+    color: @luncher-dark-olive;
     position: relative;
     padding: 5% 0 0 0;
     z-index: 3;
@@ -188,11 +209,12 @@ section a.divider {
       margin-top: 20px;
       height: 400px; 
       font-size: 1rem;
+      opacity: 0.65;
+      &:hover {
+        opacity: 1;
+        transition-duration: 0.33s;
+      }
     }
-    #mapid { 
-
-    }
-    
   }
 
   .newsletter {
@@ -204,7 +226,7 @@ section a.divider {
     position: relative;
     z-index: 2;
     .box-shadow;
-    color: @luncher-sienna;
+    color: @luncher-saddle;
     .newsletter-overlay {
       .bg-gradient(@luncher-beige;0.95;@luncher-tan;0.75);
       height: 100%;
@@ -225,6 +247,7 @@ section a.divider {
             margin: 10px auto 0;
             .btn(@clear-color; @luncher-saddle; @white; @luncher-saddle; 33%; 0px; 1.8rem);
             .border-style;
+            .box-shadow(2px; 2px; 8px; 0px; rgba(0,0,0,0.75));
             z-index: 1;
           }
           input[type=text] {
@@ -232,11 +255,12 @@ section a.divider {
             max-width: 600px;
             padding: 12px;
             margin: 8px 0;
-            border: 1px solid #ccc;
+            border: 0;
+            .border-style;
             @media @phone {
               width: 90%;
-              
             }
+
           }
         }
       }
