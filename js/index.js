@@ -86,3 +86,25 @@ window.addEventListener('scroll', () => {
   }
 });
 
+// let slides=document.querySelectorAll('.slide-image')
+// Array.from(slides).map( (banana) => {
+//   banana.style.opacity = '.75'
+// });
+
+
+let slides=document.querySelectorAll('.icon-slider');
+Array.from(slides).map( element => {
+  element.style.opacity = '1';
+  console.log(element);
+});
+// console.log(slides)
+// console.log(slideArr)
+
+// // create an array
+// var numbers = [1, 4, 9, 16];
+
+// // call map(), passing a function
+// var mapped = numbers.map(function(x) { return x * 2 });
+
+// // log the result
+// console.log(mapped);

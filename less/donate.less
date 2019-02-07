@@ -4,19 +4,28 @@ html.donate { height: unset; } // Fix the full splash height for page without sp
   .bg-gradient(@luncher-dark-olive;1;@luncher-beige;0.5);
 
   nav.nav-solid {
-    background-color: @dark;
-    .box-shadow;
+    background-color: @luncher-dark-olive;
+    .box-shadow(2px; 2px; 8px; 0px; rgba(5,5,5,0.75));
     li {
       margin-right: 5px;
     }
   }
 
   .schools-by-state {
-    padding: 100px 0 50px 0;
+    padding: 105px 0 0 0;
     color: @luncher-saddle;
+    background-image: url("../assets/img/Fruit-bar-pic-Web-USDAgov.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position-y: 2px;
+    @media @phone {
+      padding: 93px 0 0 0;
+    }
     .school-filter-bar {
       background-color: @luncher-dark-olive;
-      padding: 10px 0;
+      padding: 20px 0;
       h1 {
         text-align: center;
       }
@@ -32,7 +41,9 @@ html.donate { height: unset; } // Fix the full splash height for page without sp
           a {
             .btn(@clear-color; @white; @luncher-beige; @luncher-saddle; 33%; 0; 1.8rem; 3px 6px);
             .border-style(5px; @luncher-saddle);
-            .box-shadow;
+            // .box-shadow(2px; 2px; 8px; 0px; rgba(0,0,0,0.75));
+            .box-shadow(2px; 2px; 8px; 0px; rgba(5,5,5,0.75));
+            // .box-shadow;
           }
         }
       }
@@ -40,17 +51,21 @@ html.donate { height: unset; } // Fix the full splash height for page without sp
   }
 
   .schools {
-    .card {
-      color: @luncher-dark-olive;
-      background-color: @luncher-beige;
-      border: 0;
-      width: 100%;
-      margin: 0 auto;
-      a.btn {
-        .btn(@clear-color; @luncher-saddle; @white; @luncher-saddle; 33%; 0; 1.8rem; 3px 6px);
-        .border-style;
+    .row {
+      margin-top: 1.5rem;
+      .card {
+        color: @luncher-dark-olive;
+        background-color: @luncher-beige;
+        border: 0;
+        width: 100%;
+        margin: 0 auto;
+        a.btn {
+          .btn(@clear-color; @luncher-saddle; @white; @luncher-saddle; 33%; 0; 1.8rem; 3px 6px);
+          .border-style;
+        }
       }
     }
+    
   }
 
 }

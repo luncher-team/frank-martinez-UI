@@ -203,7 +203,7 @@ section a.divider {
     background-color: @luncher-dark-khaki;
     color: @luncher-dark-olive;
     position: relative;
-    padding: 5% 0 0 0;
+    padding: 30px 0 0 0;
     z-index: 3;
     .box-shadow;
     h3 {
@@ -215,7 +215,7 @@ section a.divider {
     }
     .map {
       position: relative;
-      max-width: 1200px;
+      // max-width: 1200px;
       margin: 0 auto;
       margin-top: 20px;
       height: 400px; 
@@ -242,15 +242,18 @@ section a.divider {
       .bg-gradient(@luncher-beige;0.95;@luncher-tan;0.75);
       height: 100%;
       form {
-        padding: 0 0 20px 0;
+        padding: 0 0 10px 0;
         .container-form {
-          padding: 5%;
+          padding: 30px;
           margin: 0 auto;
           text-align: center;
           h3 {
             text-align: center;
           }
-          p { text-align: center; }
+          p { 
+            text-align: center; 
+            margin-bottom: 13px;
+          }
           .btn {
             grid-column: span 2;
             display: flex;
@@ -282,9 +285,9 @@ section a.divider {
   .contact {
     background-color: @luncher-tan;
     color: @luncher-dark-olive;
-    padding: 5% 15%;
+    padding: 30px;
     @media @phone {
-      padding: 5% 5%;
+      padding: 30px 5%;
     }
     .grid-col-4 {
       align-items: center;
