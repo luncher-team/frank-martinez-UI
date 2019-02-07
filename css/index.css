@@ -166,6 +166,9 @@ h2 {
 h3 {
   font-size: 2.8rem;
 }
+h4 {
+  font-size: 2.2rem;
+}
 li {
   font-size: 1.4rem;
 }
@@ -209,7 +212,7 @@ p {
 }
 .grid-col-4 {
   display: grid;
-  grid-template-columns: 10% 40% 10% 40%;
+  grid-template-columns: 10% 50% 10% 30%;
   max-width: 800px;
   margin: 0 auto;
 }
@@ -1196,7 +1199,7 @@ html.donate {
   }
 }
 .donate .schools .row {
-  margin-top: 1.5rem;
+  margin: 1.5rem 10% 10% 10%;
 }
 .donate .schools .row .card {
   color: #18140f;
@@ -1204,6 +1207,11 @@ html.donate {
   border: 0;
   width: 100%;
   margin: 0 auto;
+}
+.donate .schools .row .card .card-body .donation-need {
+  padding: 10px 0;
+  font-weight: 700;
+  font-size: 1.8rem;
 }
 .donate .schools .row .card a.btn {
   background-color: rgba(255, 255, 255, 0.15);
@@ -1220,6 +1228,9 @@ html.donate {
   cursor: pointer;
   border-left: 5px solid #AE4110;
   padding-right: 10px;
+  position: absolute;
+  right: 1.5rem;
+  bottom: 1.5rem;
 }
 .donate .schools .row .card a.btn:hover {
   color: #ffffff;
@@ -1240,12 +1251,12 @@ section a.divider {
   text-decoration: none;
 }
 section a.divider .leading-arrow {
-  background-color: #18140f;
+  background-color: #232323;
   color: #E5DABD;
   font-size: 5rem;
   margin: -27px auto;
   border-radius: 28px;
-  border: 2px solid #18140f;
+  border: 2px solid #232323;
   z-index: 5;
 }
 section a.divider .leading-arrow:hover {
@@ -1256,16 +1267,15 @@ section a.divider .leading-arrow:hover {
   display: block;
   max-width: unset;
   width: 100%;
-  background-color: #232323;
 }
 .donate-footer .contact {
-  background-color: #18140f;
+  background-color: #232323;
   color: #9d6a4f;
-  padding: 5% 15%;
+  padding: 40px 15% 25px 15%;
 }
 @media (min-width: 0px) and (max-width: 600px) {
   .donate-footer .contact {
-    padding: 5% 5%;
+    padding: 40px 5% 25px;
   }
 }
 .donate-footer .contact .grid-col-4 {

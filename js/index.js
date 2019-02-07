@@ -69,8 +69,8 @@ class IconSlideRight {
 // The second argument to the component is 'start slide position'.
 // The third and fourth arguments are elements to slide.
 slideFinder = () => {
-  scroll_pos = new IconSlideLeft(last_known_scroll_position, 400, '.icon-left', '.text-left');
-  scroll_pos = new IconSlideRight(last_known_scroll_position, 500, '.icon-right', '.text-right');
+  scroll_pos = new IconSlideLeft(last_known_scroll_position, 345, '.icon-left', '.text-left');
+  scroll_pos = new IconSlideRight(last_known_scroll_position, 450, '.icon-right', '.text-right');
 }
 
 window.addEventListener('scroll', () => {

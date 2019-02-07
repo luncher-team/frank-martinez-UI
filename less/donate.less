@@ -52,16 +52,27 @@ html.donate { height: unset; } // Fix the full splash height for page without sp
 
   .schools {
     .row {
-      margin-top: 1.5rem;
+      margin: 1.5rem 10% 10% 10%;
       .card {
         color: @luncher-dark-olive;
         background-color: @luncher-beige;
         border: 0;
         width: 100%;
         margin: 0 auto;
+        .card-body {
+          
+          .donation-need {
+            padding: 10px 0;
+            font-weight: 700;
+            font-size: 1.8rem;
+          }
+        }
         a.btn {
           .btn(@clear-color; @luncher-saddle; @white; @luncher-saddle; 33%; 0; 1.8rem; 3px 6px);
           .border-style;
+          position: absolute;
+          right: 1.5rem;
+          bottom: 1.5rem;
         }
       }
     }
@@ -77,12 +88,12 @@ section a.divider {
   margin-top: -3px;
   text-decoration: none;
   .leading-arrow {
-    background-color: @luncher-dark-olive;
+    background-color: @dark;
     color: @luncher-beige;
     font-size: 5rem;
     margin: -27px auto;
     border-radius: 28px;
-    border: 2px solid @luncher-dark-olive;
+    border: 2px solid @dark;
     z-index: 5;
     &:hover {
       transform: scale(1.25);
@@ -97,14 +108,13 @@ section a.divider {
   display: block;
   max-width: unset;
   width: 100%;
-  background-color: @dark;
 
   .contact {
-    background-color: @luncher-dark-olive;
+    background-color: @dark;
     color: @luncher-tan;
-    padding: 5% 15%;
+    padding: 40px 15% 25px 15%;
     @media @phone {
-      padding: 5% 5%;
+      padding: 40px 5% 25px;
     }
     .grid-col-4 {
       align-items: center;
